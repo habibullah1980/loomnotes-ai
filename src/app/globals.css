@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary-blue: #2563eb;
+  --deep-blue: #1e3a8a;
+  --teal: #0d9488;
+  --light-teal: #ccfbf1;
+  --page-bg: #f8fafc;
+  --surface-card: #ffffff;
+  --main-text: #0f172a;
+  --secondary-text: #64748b;
+  --border-color: #e2e8f0;
+
+  --background: #f8fafc;
+  --foreground: #0f172a;
+}
+
+.dark {
+  --primary-blue: #3b82f6;
+  --deep-blue: #60a5fa;
+  --teal: #14b8a6;
+  --light-teal: #134e4a;
+  --page-bg: #090d16;
+  --surface-card: #0f172a;
+  --main-text: #f8fafc;
+  --secondary-text: #94a3b8;
+  --border-color: #1e293b;
+
+  --background: #090d16;
+  --foreground: #f8fafc;
+}
+
+@theme inline {
+  --color-primary-blue: var(--primary-blue);
+  --color-deep-blue: var(--deep-blue);
+  --color-teal: var(--teal);
+  --color-light-teal: var(--light-teal);
+  --color-page-bg: var(--page-bg);
+  --color-surface-card: var(--surface-card);
+  --color-main-text: var(--main-text);
+  --color-secondary-text: var(--secondary-text);
+  --color-border-color: var(--border-color);
+
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Subtle scrollbar for light and dark themes */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.4);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
