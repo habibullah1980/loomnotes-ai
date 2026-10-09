@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LoomNotes AI
+
+**AI-powered meeting notes, summaries, and action-item management.**
+
+LoomNotes AI transforms meeting transcripts into structured notes using Google's Gemini AI. It helps teams capture key takeaways, decisions, action items, and follow-up questions in one workspace.
+
+## Features
+
+- **AI Meeting Summaries** — Generate structured summaries from meeting transcripts.
+- **Action Items** — Extract tasks, assignees, and due dates.
+- **Key Takeaways & Decisions** — Organize important meeting outcomes.
+- **Follow-up Questions** — Identify questions requiring further discussion.
+- **Meeting History** — Save and revisit previously processed meetings.
+- **Loom Integration Support** — Associate Loom URLs with meeting records.
+- **Authentication** — User signup, login, password reset, and session management.
+- **Admin Dashboard** — Administrative tools for user management, permissions, analytics, and audit logs.
+- **Usage Tracking** — Track monthly AI meeting generation activity.
+
+## Technology Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Supabase Authentication and PostgreSQL
+- Google Gemini AI
+- Tailwind CSS 4
+- Vercel deployment
 
 ## Getting Started
 
-First, run the development server:
+### Requirements
+
+- Node.js compatible with your installed Next.js version
+- npm
+- A Supabase project
+- A Google Gemini API key
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/habibullah1980/loomnotes-ai.git
+cd loomnotes-ai
+npm install
+```
+
+Create a local environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+Configure the required environment variables using the names documented in `.env.example` and the corresponding service documentation. Never commit real API keys or credentials.
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run db:verify` | Verify database connectivity |
+| `npm run test:auth` | Run authentication tests |
+| `npm run test:admin` | Run admin authorization tests |
+| `npm run test:e2e` | Run end-to-end test script |
 
-## Learn More
+Some test scripts require a configured `.env.local` and access to a test database. Review each script before running it against production.
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The application can be deployed to Vercel with a configured Supabase project and Gemini API credentials.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Before deployment:
 
-## Deploy on Vercel
+1. Configure all required environment variables.
+2. Apply the database migrations.
+3. Verify authentication and Row Level Security policies.
+4. Run the production build.
+5. Test the deployed authentication and meeting workflows.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See `DEPLOYMENT.md` for project-specific deployment instructions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Security
+
+- Keep service-role keys and API credentials server-side.
+- Never commit `.env.local` or production secrets.
+- Verify database Row Level Security policies before production use.
+- Restrict administrative operations to authorized administrators.
+- Test account isolation and access controls before handling real customer data.
+
+## Project Status
+
+LoomNotes AI is an actively prepared software asset. Some functionality may require further development, testing, or configuration before production use.
+
+Review the current implementation and test results before relying on individual features.
+
+## License and Ownership
+
+License terms and ownership-transfer arrangements should be confirmed by the current owner before redistribution or acquisition.
+
+## Contact
+
+For product information or acquisition inquiries, contact the project owner.
