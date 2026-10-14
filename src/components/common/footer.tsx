@@ -108,7 +108,17 @@ export function Footer() {
         <div className="pt-8 mt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
           <p>© {new Date().getFullYear()} LoomNotes AI. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
-            <span>Built with Next.js 16, Supabase, and Google Gemini.</span>
+            <span>
+              Design and Developed by{" "}
+              <a
+                href="https://hthinkers.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              >
+                HThinkers.com
+              </a>
+            </span>
           </p>
         </div>
       </div>
