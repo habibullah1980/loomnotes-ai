@@ -37,7 +37,7 @@ export interface GeminiTestResult {
  * and returns the generated response.
  */
 export async function testGeminiConnection(
-  prompt = "Hello Gemini! Confirm you are connected to LoomNotes AI in one short sentence."
+  prompt = "Hello Gemini! Confirm you are connected to pdfkitfree in one short sentence."
 ): Promise<GeminiTestResult> {
   const ai = getGeminiClient();
 

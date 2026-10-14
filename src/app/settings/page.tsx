@@ -4,7 +4,7 @@ import { ClientFollowProvider } from "@/context/clientfollow-context";
 import ClientFollowSettingsView from "@/components/settings/clientfollow-settings-view";
 
 export const metadata: Metadata = {
-  title: "Settings - ClientFollow CRM",
+  title: "Settings - pdfkitfree CRM",
   description: "Account and workspace settings, automated cadence defaults, and preferences.",
 };
 

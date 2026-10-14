@@ -9,37 +9,37 @@ const inter = Inter({
   display: "swap",
 });
 
-const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://loomnotes.ai";
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://pdfkitfree.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
   title: {
-    default: "LoomNotes AI - Turn Every Meeting Into Clear Action",
-    template: "%s | LoomNotes AI",
+    default: "pdfkitfree - Turn Every Meeting Into Clear Action",
+    template: "%s | pdfkitfree",
   },
   description:
-    "LoomNotes AI transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
+    "pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
   keywords: [
-    "Loom notes",
+    "pdfkitfree",
     "meeting summary AI",
     "action items extractor",
     "Gemini AI meetings",
     "video transcript summary",
     "async meeting notes",
   ],
-  authors: [{ name: "LoomNotes AI Team" }],
+  authors: [{ name: "pdfkitfree Team" }],
   openGraph: {
-    title: "LoomNotes AI - Turn Every Meeting Into Clear Action",
+    title: "pdfkitfree - Turn Every Meeting Into Clear Action",
     description:
-      "Transform meeting conversations and Loom recordings into structured summaries, key decisions, and action items automatically with Google Gemini.",
+      "Transform meeting conversations and recordings into structured summaries, key decisions, and action items automatically with Google Gemini.",
     url: appUrl,
-    siteName: "LoomNotes AI",
+    siteName: "pdfkitfree",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "LoomNotes AI - Turn Every Meeting Into Clear Action",
+    title: "pdfkitfree - Turn Every Meeting Into Clear Action",
     description:
       "Transform meeting conversations into structured summaries, key decisions, and action items with Google Gemini.",
   },

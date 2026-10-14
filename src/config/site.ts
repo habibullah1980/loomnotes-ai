@@ -3,9 +3,9 @@
  */
 
 export const siteConfig = {
-  name: "LoomNotes AI",
+  name: "pdfkitfree",
   description:
-    "Transform Loom video recordings into executive summaries, action items, and searchable knowledge using Google Gemini & Supabase.",
+    "Transform meeting recordings and documents into executive summaries, action items, and searchable knowledge using Google Gemini & Supabase.",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   links: {
     github: "https://github.com",

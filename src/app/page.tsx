@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "LoomNotes AI - Turn Every Meeting Into Clear Action",
+  title: "pdfkitfree - Turn Every Meeting Into Clear Action",
   description:
-    "LoomNotes AI transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
+    "pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
 };
 
 export default async function Home() {
@@ -79,7 +79,7 @@ export default async function Home() {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              LoomNotes AI transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically.
+              pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically.
             </p>
 
             {/* CTAs */}
@@ -120,7 +120,7 @@ export default async function Home() {
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
-                    <span className="ml-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">loomnotes.ai/dashboard</span>
+                    <span className="ml-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">pdfkitfree.com/dashboard</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="inline-flex items-center gap-1 text-[11px] font-medium text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/50 border border-teal-200 dark:border-teal-800 px-2 py-0.5 rounded-md">
@@ -295,7 +295,7 @@ export default async function Home() {
                       The Solution
                     </h3>
                     <p className="text-xs text-teal-700 dark:text-teal-400">
-                      LoomNotes turns conversations into structured information you can actually use.
+                      pdfkitfree turns conversations into structured information you can actually use.
                     </p>
                   </div>
                 </div>
@@ -624,7 +624,7 @@ export default async function Home() {
                 Unlimited AI meetings for all teams
               </h2>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                LoomNotes AI is currently in technical preview. All users receive unlimited meeting generations.
+                pdfkitfree is currently in technical preview. All users receive unlimited meeting generations.
               </p>
             </div>
 

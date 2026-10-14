@@ -8,7 +8,7 @@ import { ActionItemsHub, HubActionItem } from "@/components/meetings/action-item
 import { ChevronRight, Plus } from "lucide-react";
 
 export const metadata = {
-  title: "Action Items - LoomNotes AI",
+  title: "Action Items - pdfkitfree",
   description: "Manage, track, and complete actionable tasks across all your meetings.",
 };
 

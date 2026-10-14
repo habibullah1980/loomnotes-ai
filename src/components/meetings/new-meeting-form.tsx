@@ -26,7 +26,7 @@ interface NewMeetingFormProps {
   usage?: MonthlyUsageInfo;
 }
 
-const SAMPLE_TRANSCRIPT = `Sarah (Product Lead): Hey everyone, thanks for joining our weekly product sync. Today we need to lock down the MVP scope for LoomNotes AI and review the onboarding flow.
+const SAMPLE_TRANSCRIPT = `Sarah (Product Lead): Hey everyone, thanks for joining our weekly product sync. Today we need to lock down the MVP scope for pdfkitfree and review the onboarding flow.
 
 Alex (Frontend Eng): Sounds good. On the frontend, we've set up Next.js 16 and Tailwind v4. The Supabase auth integration is complete and tested. Habib tested the dashboard protection, and the user session proxy is working smoothly.
 
@@ -100,7 +100,7 @@ export function NewMeetingForm({ usage }: NewMeetingFormProps) {
   };
 
   const handleLoadSample = () => {
-    setTitle("Product Engineering Sync: LoomNotes MVP");
+    setTitle("Product Engineering Sync: pdfkitfree MVP");
     setTranscript(SAMPLE_TRANSCRIPT);
     setClientError(null);
     setTranscriptFetchError(null);

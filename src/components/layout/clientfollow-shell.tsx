@@ -95,7 +95,7 @@ export function ClientFollowShell({ children }: ClientFollowShellProps) {
               <div className="w-8 h-8 rounded-lg bg-[#2563eb] flex items-center justify-center text-white shadow-xs">
                 <span className="material-symbols-outlined text-lg leading-none font-bold">bolt</span>
               </div>
-              <span className="font-bold text-lg text-[#131b2e] tracking-tight">ClientFollow</span>
+              <span className="font-bold text-lg text-[#131b2e] tracking-tight">pdfkitfree</span>
             </Link>
             <span className="px-2 py-0.5 rounded-full bg-[#86f2e4] text-[#006f66] text-[11px] uppercase font-bold tracking-wider">
               Pro

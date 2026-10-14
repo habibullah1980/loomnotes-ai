@@ -21,8 +21,8 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Dashboard - LoomNotes AI",
-  description: "Manage your Loom meeting summaries, action items, and knowledge repository.",
+  title: "Dashboard - pdfkitfree",
+  description: "Manage your meeting summaries, action items, and knowledge repository.",
 };
 
 function getGreeting(): string {

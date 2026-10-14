@@ -8,7 +8,7 @@ import { NewMeetingForm } from "@/components/meetings/new-meeting-form";
 import { ChevronRight, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "New Meeting - LoomNotes AI",
+  title: "New Meeting - pdfkitfree",
   description: "Create a new meeting and generate AI notes from your Loom video transcript.",
 };
 

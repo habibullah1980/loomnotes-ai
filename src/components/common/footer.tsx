@@ -13,7 +13,7 @@ export function Footer() {
                 <Video className="h-4 w-4" />
               </div>
               <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white">
-                LoomNotes<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">AI</span>
+                pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
               </span>
             </Link>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
@@ -106,7 +106,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-          <p>© {new Date().getFullYear()} LoomNotes AI. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} pdfkitfree. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
             <span>
               Design and Developed by{" "}

@@ -29,7 +29,7 @@ export function Navbar({ user }: NavbarProps) {
             </div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-                LoomNotes<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">AI</span>
+                pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
               </span>
             </div>
           </Link>

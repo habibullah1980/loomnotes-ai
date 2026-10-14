@@ -4,8 +4,8 @@ import { Loader2, Video } from "lucide-react";
 import { LoginForm } from "@/components/auth/login-form";
 
 export const metadata = {
-  title: "Log In - LoomNotes AI",
-  description: "Sign in to access your LoomNotes AI dashboard and notes.",
+  title: "Log In - pdfkitfree",
+  description: "Sign in to access your pdfkitfree dashboard and notes.",
 };
 
 function FormFallback() {
@@ -30,7 +30,7 @@ export default function LoginPage() {
               <Video className="h-5 w-5" />
             </div>
             <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              LoomNotes AI
+              pdfkitfree
             </span>
           </Link>
           <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">

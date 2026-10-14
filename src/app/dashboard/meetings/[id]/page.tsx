@@ -27,7 +27,7 @@ interface MeetingPageProps {
 export async function generateMetadata({ params }: MeetingPageProps) {
   const { id } = await params;
   const supabase = await createServerSupabaseClient();
-  if (!supabase) return { title: "Meeting Details - LoomNotes AI" };
+  if (!supabase) return { title: "Meeting Details - pdfkitfree" };
 
   const { data: meeting } = await supabase
     .from("meetings")
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: MeetingPageProps) {
     .single();
 
   return {
-    title: meeting ? `${meeting.title} - LoomNotes AI` : "Meeting Notes",
+    title: meeting ? `${meeting.title} - pdfkitfree` : "Meeting Notes",
   };
 }
 

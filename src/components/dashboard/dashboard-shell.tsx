@@ -77,7 +77,7 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
               <Video className="h-4 w-4" />
             </div>
             <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-              LoomNotes<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">AI</span>
+              pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
             </span>
           </Link>
         </div>
@@ -202,7 +202,7 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white shadow-2xs">
                 <Video className="h-3.5 w-3.5" />
               </div>
-              <span className="font-bold text-sm text-slate-900 dark:text-white">LoomNotes</span>
+              <span className="font-bold text-sm text-slate-900 dark:text-white">pdfkitfree</span>
             </Link>
           </div>
 

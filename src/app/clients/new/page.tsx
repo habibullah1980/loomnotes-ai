@@ -4,7 +4,7 @@ import { ClientFollowProvider } from "@/context/clientfollow-context";
 import AddClientFormView from "@/components/clients/add-client-form-view";
 
 export const metadata: Metadata = {
-  title: "Add New Client - ClientFollow CRM",
+  title: "Add New Client - pdfkitfree CRM",
   description: "Create a new client profile with commercial scope and follow-up cadences.",
 };
 

@@ -45,7 +45,7 @@ export function formatEventDisplayTitle(userName: string, eventType: string, met
     case "login":
       return `${name} signed in`;
     case "signup":
-      return `${name} signed up for LoomNotes AI`;
+      return `${name} signed up for pdfkitfree`;
     case "logout":
       return `${name} signed out`;
     case "meeting_created":
@@ -195,7 +195,7 @@ export async function getActivityFeed(options: ActivityFilterOptions = {}): Prom
       userName,
       userEmail,
       eventType: "signup",
-      displayTitle: `${userName} signed up for LoomNotes AI`,
+      displayTitle: `${userName} signed up for pdfkitfree`,
       createdAt: u.created_at,
       deviceCategory: "Desktop",
       browser: "Chrome",

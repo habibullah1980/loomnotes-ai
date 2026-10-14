@@ -4,7 +4,7 @@ import { ClientFollowProvider } from "@/context/clientfollow-context";
 import ClientsDirectoryView from "@/components/clients/clients-directory-view";
 
 export const metadata: Metadata = {
-  title: "Clients Directory - ClientFollow CRM",
+  title: "Clients Directory - pdfkitfree CRM",
   description: "Manage client relationships, contract milestones, and communication cadence.",
 };
 
