@@ -77,7 +77,7 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
               <Video className="h-4 w-4" />
             </div>
             <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-              FreePDF<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">Kit</span>
+              LoomNotes<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">AI</span>
             </span>
           </Link>
         </div>
