@@ -4,8 +4,11 @@ import { Footer } from "@/components/common/footer";
 import { ArrowLeft, Lock, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy - pdfkitfree",
-  description: "Privacy Policy and data protection commitments for pdfkitfree.",
+  title: "Privacy Policy - FreePDFKit",
+  description: "Privacy Policy and data protection commitments for FreePDFKit.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

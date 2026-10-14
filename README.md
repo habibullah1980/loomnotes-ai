@@ -1,43 +1,45 @@
-# LoomNotes AI
+# FreePDFKit (pdfkitfree)
 
-**AI-powered meeting notes, summaries, and action-item management.**
+**All-in-One Free PDF Tools, Video Compressor & Electronic NDA Signing SaaS**
 
-LoomNotes AI transforms meeting transcripts into structured notes using Google's Gemini AI. It helps teams capture key takeaways, decisions, action items, and follow-up questions in one workspace.
+FreePDFKit provides high-performance document tools, meeting summaries, video compression, and electronic contract signing with bank-grade security, PostgreSQL Row Level Security (RLS), and Google Gemini AI intelligence.
 
-## Features
+---
 
-- **AI Meeting Summaries** — Generate structured summaries from meeting transcripts.
-- **Action Items** — Extract tasks, assignees, and due dates.
-- **Key Takeaways & Decisions** — Organize important meeting outcomes.
-- **Follow-up Questions** — Identify questions requiring further discussion.
-- **Meeting History** — Save and revisit previously processed meetings.
-- **Loom Integration Support** — Associate Loom URLs with meeting records.
-- **Authentication** — User signup, login, password reset, and session management.
-- **Admin Dashboard** — Administrative tools for user management, permissions, analytics, and audit logs.
-- **Usage Tracking** — Track monthly AI meeting generation activity.
+## 🌟 Core Features
 
-## Technology Stack
+- **PDF Processing Suite**: Merge, split, compress, convert (PDF to Word/Excel/Image, Image to PDF), annotate, and password-protect PDFs.
+- **Video Compressor**: Shrink large MP4, WebM, and MOV video recordings for easy sharing and email delivery.
+- **Electronic NDA Signing**: Create standard mutual NDAs or upload agreements, place signature fields, draw/type e-signatures, and download signed contracts with digital audit trails.
+- **AI Document & Meeting Chat**: Extract executive summaries, decisions, and action items powered by Google Gemini.
+- **Customer Support Chatbot**: Persistent floating AI & grounded knowledge assistant answering tool questions, pricing details, and troubleshooting.
+- **Google Analytics 4 (GA4)**: Privacy-safe, PII-free event tracking with user consent management.
+- **Technical SEO**: Canonical URLs, Open Graph / Twitter Cards, XML Sitemap, Robots.txt, and JSON-LD structured data.
+- **Super Admin Console**: Comprehensive user management, audit logging, system analytics, and permission roles.
 
-- Next.js 16
-- React 19
-- TypeScript
-- Supabase Authentication and PostgreSQL
-- Google Gemini AI
-- Tailwind CSS 4
-- Vercel deployment
+---
 
-## Getting Started
+## 🎨 Brand Design Tokens
 
-### Requirements
+The application strictly preserves the brand identity:
+- **Primary Indigo**: `#4b49ac`
+- **Sky Blue**: `#98dbff`
+- **Periwinkle**: `#7DA0FA`
+- **Slate Purple**: `#7978e3`
+- **Soft Coral**: `#f3797e`
 
-- Node.js compatible with your installed Next.js version
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
 - npm
-- A Supabase project
-- A Google Gemini API key
+- Supabase project (URL and anon key)
+- Google Gemini API key (optional for AI streaming; falls back to grounded knowledge engine)
 
 ### Installation
-
-Clone the repository:
 
 ```bash
 git clone https://github.com/habibullah1980/loomnotes-ai.git
@@ -45,69 +47,80 @@ cd loomnotes-ai
 npm install
 ```
 
-Create a local environment file:
+### Environment Variables
 
-```bash
-cp .env.example .env.local
+Configure `.env.local`:
+
+```env
+# Application URL
+NEXT_PUBLIC_APP_URL="https://pdfkitfree.com"
+
+# Supabase Auth & Database
+NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key"
+SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
+
+# Google Gemini AI
+GEMINI_API_KEY="your-gemini-api-key"
+GEMINI_MODEL="gemini-2.5-flash"
+
+# Google Analytics 4 (GA4)
+NEXT_PUBLIC_GA_MEASUREMENT_ID="G-XXXXXXXXXX"
+
+# Google Search Console Verification (Optional)
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION="your-verification-code"
 ```
 
-Configure the required environment variables using the names documented in `.env.example` and the corresponding service documentation. Never commit real API keys or credentials.
-
-Start the development server:
+### Running Locally
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Visit [http://localhost:3000](http://localhost:3000) or [http://localhost:3001](http://localhost:3001).
 
-## Available Scripts
+---
 
-| Command | Purpose |
-|---|---|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run db:verify` | Verify database connectivity |
-| `npm run test:auth` | Run authentication tests |
-| `npm run test:admin` | Run admin authorization tests |
-| `npm run test:e2e` | Run end-to-end test script |
+## 📊 Google Analytics 4 Configuration
 
-Some test scripts require a configured `.env.local` and access to a test database. Review each script before running it against production.
+1. Obtain your **Measurement ID** (format: `G-XXXXXXXXXX`) from your Google Analytics 4 Admin property settings.
+2. Add `NEXT_PUBLIC_GA_MEASUREMENT_ID="G-XXXXXXXXXX"` to `.env.local` or your Vercel project environment settings.
+3. The tracking system operates under strict privacy constraints:
+   - **No PII is ever transmitted**: Email addresses, passwords, document contents, and personal names are scrubbed.
+   - **Consent-aware**: Tracking is queued until the user grants analytics consent via the banner.
+   - **Development isolated**: In non-production environments, events are logged cleanly to the console for testing.
 
-## Deployment
+---
 
-The application can be deployed to Vercel with a configured Supabase project and Gemini API credentials.
+## 🤖 Customer Support Chatbot
 
-Before deployment:
+The support chatbot widget is globally accessible on all pages:
+- Grounded in `/src/lib/support/knowledge-base.ts`.
+- Server-side rate limited to prevent denial-of-service.
+- Secure fallback when AI credentials are not configured.
+- Escalation path directly to `support@pdfkitfree.com`.
 
-1. Configure all required environment variables.
-2. Apply the database migrations.
-3. Verify authentication and Row Level Security policies.
-4. Run the production build.
-5. Test the deployed authentication and meeting workflows.
+---
 
-See `DEPLOYMENT.md` for project-specific deployment instructions.
+## 🔍 Quality Assurance & Testing
 
-## Security
+```bash
+# Typecheck and production build
+npm run build
 
-- Keep service-role keys and API credentials server-side.
-- Never commit `.env.local` or production secrets.
-- Verify database Row Level Security policies before production use.
-- Restrict administrative operations to authorized administrators.
-- Test account isolation and access controls before handling real customer data.
+# Run linting
+npm run lint
 
-## Project Status
+# Verify database connection
+npm run db:verify
 
-LoomNotes AI is an actively prepared software asset. Some functionality may require further development, testing, or configuration before production use.
+# End-to-end integration flow
+npm run test:e2e
+```
 
-Review the current implementation and test results before relying on individual features.
+---
 
-## License and Ownership
+## 🛡️ License & Credits
 
-License terms and ownership-transfer arrangements should be confirmed by the current owner before redistribution or acquisition.
-
-## Contact
-
-For product information or acquisition inquiries, contact the project owner.
+Design and Developed by [HThinkers.com](https://hthinkers.com).  
+© 2026 FreePDFKit. All rights reserved.

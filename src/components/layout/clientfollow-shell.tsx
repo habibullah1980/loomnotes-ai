@@ -92,10 +92,10 @@ export function ClientFollowShell({ children }: ClientFollowShellProps) {
           {/* Logo & Brand Header */}
           <div className="h-16 px-6 flex items-center justify-between border-b border-slate-100">
             <Link href="/dashboard" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 rounded-lg bg-[#2563eb] flex items-center justify-center text-white shadow-xs">
+              <div className="w-8 h-8 rounded-lg bg-[#4b49ac] flex items-center justify-center text-white shadow-xs">
                 <span className="material-symbols-outlined text-lg leading-none font-bold">bolt</span>
               </div>
-              <span className="font-bold text-lg text-[#131b2e] tracking-tight">pdfkitfree</span>
+              <span className="font-bold text-lg text-[#131b2e] tracking-tight">FreePDFKit</span>
             </Link>
             <span className="px-2 py-0.5 rounded-full bg-[#86f2e4] text-[#006f66] text-[11px] uppercase font-bold tracking-wider">
               Pro

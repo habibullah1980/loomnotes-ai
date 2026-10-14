@@ -4,8 +4,15 @@ import { Loader2, Video } from "lucide-react";
 import { SignupForm } from "@/components/auth/signup-form";
 
 export const metadata = {
-  title: "Sign Up - pdfkitfree",
-  description: "Create an account to start turning Loom videos into actionable notes.",
+  title: "Sign Up - FreePDFKit",
+  description: "Create a free account to access FreePDFKit tools and workspace.",
+  alternates: {
+    canonical: "/signup",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 function FormFallback() {

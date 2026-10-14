@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { SupportChatWidget } from "@/components/support/support-chat-widget";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { CookieConsentBanner } from "@/components/analytics/cookie-consent";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,38 +17,58 @@ const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://pdfkitfree.com";
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
   title: {
-    default: "pdfkitfree - Turn Every Meeting Into Clear Action",
-    template: "%s | pdfkitfree",
+    default: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
+    template: "%s | FreePDFKit",
   },
   description:
-    "pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
+    "Free online PDF tools to merge, split, compress, convert, edit, and protect PDFs. Features video compressor, electronic NDA signing, and AI document chat with bank-grade security.",
   keywords: [
+    "FreePDFKit",
     "pdfkitfree",
-    "meeting summary AI",
-    "action items extractor",
-    "Gemini AI meetings",
-    "video transcript summary",
-    "async meeting notes",
+    "merge pdf free",
+    "split pdf",
+    "compress pdf online",
+    "convert pdf to word",
+    "video compressor free",
+    "sign nda online",
+    "ai document chat",
+    "gemini pdf analyzer",
+    "electronic signature pdf",
   ],
-  authors: [{ name: "pdfkitfree Team" }],
+  authors: [{ name: "FreePDFKit Team" }],
+  creator: "FreePDFKit",
+  publisher: "FreePDFKit",
+  alternates: {
+    canonical: "./",
+  },
   openGraph: {
-    title: "pdfkitfree - Turn Every Meeting Into Clear Action",
+    title: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
     description:
-      "Transform meeting conversations and recordings into structured summaries, key decisions, and action items automatically with Google Gemini.",
+      "Merge, split, compress, convert, and protect PDFs online. Includes video compression, e-signing NDAs, and Gemini AI document chat.",
     url: appUrl,
-    siteName: "pdfkitfree",
+    siteName: "FreePDFKit",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "pdfkitfree - Turn Every Meeting Into Clear Action",
+    title: "FreePDFKit - All-in-One Free PDF Tools & Video Compressor",
     description:
-      "Transform meeting conversations into structured summaries, key decisions, and action items with Google Gemini.",
+      "Merge, split, compress, convert, edit PDFs and sign NDAs online with FreePDFKit.",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "",
   },
 };
 
@@ -79,9 +102,14 @@ export default function RootLayout({
       </head>
       <body
         suppressHydrationWarning
-        className="min-h-full flex flex-col bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 antialiased selection:bg-blue-600 selection:text-white transition-colors"
+        className="min-h-full flex flex-col bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 antialiased selection:bg-[#4b49ac] selection:text-white transition-colors"
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <GoogleAnalytics />
+        <ThemeProvider>
+          {children}
+          <SupportChatWidget />
+          <CookieConsentBanner />
+        </ThemeProvider>
       </body>
     </html>
   );

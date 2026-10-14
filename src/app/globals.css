@@ -13,6 +13,13 @@
   --secondary-text: #64748b;
   --border-color: #e2e8f0;
 
+  /* FreePDFKit Brand Palette */
+  --brand-primary: #4b49ac;
+  --brand-sky: #98dbff;
+  --brand-periwinkle: #7DA0FA;
+  --brand-indigo: #7978e3;
+  --brand-coral: #f3797e;
+
   --background: #f8fafc;
   --foreground: #0f172a;
 }
@@ -28,6 +35,13 @@
   --secondary-text: #94a3b8;
   --border-color: #1e293b;
 
+  /* FreePDFKit Brand Palette */
+  --brand-primary: #6362c9;
+  --brand-sky: #98dbff;
+  --brand-periwinkle: #7DA0FA;
+  --brand-indigo: #8a89ea;
+  --brand-coral: #f3797e;
+
   --background: #090d16;
   --foreground: #f8fafc;
 }
@@ -42,6 +56,13 @@
   --color-main-text: var(--main-text);
   --color-secondary-text: var(--secondary-text);
   --color-border-color: var(--border-color);
+
+  /* FreePDFKit Brand Colors */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-periwinkle: var(--brand-periwinkle);
+  --color-brand-indigo: var(--brand-indigo);
+  --color-brand-coral: var(--brand-coral);
 
   --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }

@@ -4,8 +4,15 @@ import { Loader2, Video } from "lucide-react";
 import { LoginForm } from "@/components/auth/login-form";
 
 export const metadata = {
-  title: "Log In - pdfkitfree",
-  description: "Sign in to access your pdfkitfree dashboard and notes.",
+  title: "Log In - FreePDFKit",
+  description: "Sign in to access your FreePDFKit dashboard and tools.",
+  alternates: {
+    canonical: "/login",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 function FormFallback() {

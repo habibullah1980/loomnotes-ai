@@ -24,12 +24,12 @@ export function Navbar({ user }: NavbarProps) {
         {/* Brand Logo */}
         <div className="flex items-center gap-3">
           <Link href={user ? "/dashboard" : "/"} className="flex items-center gap-2.5 group">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 via-blue-700 to-teal-600 text-white shadow-xs shadow-blue-500/20 group-hover:scale-105 transition-transform">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-[#4b49ac] via-[#7978e3] to-[#7DA0FA] text-white shadow-xs shadow-[#4b49ac]/20 group-hover:scale-105 transition-transform">
               <Video className="h-4.5 w-4.5" />
             </div>
             <div className="flex items-center gap-2">
               <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-                pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
+                FreePDF<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">Kit</span>
               </span>
             </div>
           </Link>

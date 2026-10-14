@@ -21,9 +21,84 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "pdfkitfree - Turn Every Meeting Into Clear Action",
+  title: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
   description:
-    "pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.",
+    "Free online PDF tools to merge, split, compress, convert, edit, and protect PDFs. Features video compressor, electronic NDA signing, and AI document chat with bank-grade security.",
+  alternates: {
+    canonical: "https://pdfkitfree.com",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "FreePDFKit",
+      "operatingSystem": "Web, Windows, macOS, Linux, iOS, Android",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+      },
+      "description":
+        "Free all-in-one PDF tools to merge, split, compress, convert, edit, and protect PDFs with video compression and electronic NDA signing.",
+      "url": "https://pdfkitfree.com",
+    },
+    {
+      "@type": "Organization",
+      "name": "FreePDFKit",
+      "url": "https://pdfkitfree.com",
+      "logo": "https://pdfkitfree.com/favicon.ico",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@pdfkitfree.com",
+        "contactType": "customer support",
+      },
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I merge multiple PDF files for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Upload your PDF documents to the FreePDFKit workspace, reorder the pages or files as desired, and click 'Merge PDFs' to download your combined document instantly.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "How does electronic NDA signing work in FreePDFKit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "You can upload an existing contract or generate a standard mutual NDA template, place signature and date fields, draw or type your electronic signature, and download a finalized signed PDF with a digital audit trail.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Is FreePDFKit safe and private for confidential business documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes. All file transfers are secured with TLS 1.3 encryption. Data is isolated using PostgreSQL Row Level Security (RLS), and files are never used to train public AI models.",
+          },
+        },
+        {
+          "@type": "Question",
+          "name": "Can I compress videos as well as PDF documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text":
+              "Yes. FreePDFKit includes a built-in video compressor supporting MP4, WebM, and MOV formats to reduce video file sizes for email and web sharing.",
+          },
+        },
+      ],
+    },
+  ],
 };
 
 export default async function Home() {
@@ -52,6 +127,10 @@ export default async function Home() {
 
   return (
     <div className="flex min-h-screen flex-col bg-slate-50 dark:bg-[#090d16] text-slate-900 dark:text-slate-100 selection:bg-blue-600 selection:text-white transition-colors duration-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar user={user} />
 
       <main className="flex-1">

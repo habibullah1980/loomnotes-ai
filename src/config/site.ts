@@ -1,19 +1,20 @@
 /**
- * Site configuration and navigation structure for LoomNotes AI
+ * Site configuration and navigation structure for FreePDFKit
  */
 
 export const siteConfig = {
-  name: "pdfkitfree",
+  name: "FreePDFKit",
   description:
-    "Transform meeting recordings and documents into executive summaries, action items, and searchable knowledge using Google Gemini & Supabase.",
-  url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+    "All-in-one free online PDF tools to merge, split, compress, and convert documents, plus video compression, electronic NDA signing, and AI document chat.",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://pdfkitfree.com",
   links: {
     github: "https://github.com",
-    docs: "/docs",
+    docs: "/#features",
+    supportEmail: "support@pdfkitfree.com",
   },
   navItems: [
     { label: "Features", href: "#features" },
-    { label: "Architecture", href: "#architecture" },
-    { label: "Roadmap", href: "#roadmap" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Pricing", href: "#pricing" },
   ],
 };

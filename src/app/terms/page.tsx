@@ -4,8 +4,11 @@ import { Footer } from "@/components/common/footer";
 import { FileText, ArrowLeft, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "Terms of Service - pdfkitfree",
-  description: "Terms of Service and acceptable use policy for pdfkitfree.",
+  title: "Terms of Service - FreePDFKit",
+  description: "Terms of Service and acceptable use policy for FreePDFKit.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsOfServicePage() {

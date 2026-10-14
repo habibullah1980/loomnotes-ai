@@ -65,11 +65,11 @@ export function StitchAuthForm({ initialMode = "signin" }: StitchAuthProps) {
           <div className="flex flex-col space-y-6">
             {/* Logo & Brand Header */}
             <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 rounded-xl bg-[#2563eb] flex items-center justify-center text-white shadow-xs font-bold text-lg">
+              <div className="w-10 h-10 rounded-xl bg-[#4b49ac] flex items-center justify-center text-white shadow-xs font-bold text-lg">
                 <span className="material-symbols-outlined leading-none">bolt</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg text-[#131b2e] tracking-tight font-extrabold">pdfkitfree</span>
+                <span className="text-lg text-[#131b2e] tracking-tight font-extrabold">FreePDFKit</span>
                 <span className="text-[10px] text-[#434655] uppercase tracking-wider font-bold">
                   Freelance Pipeline Engine
                 </span>
@@ -167,7 +167,7 @@ export function StitchAuthForm({ initialMode = "signin" }: StitchAuthProps) {
             {/* Dynamic Header */}
             <div className="mb-4">
               <h2 className="text-xl font-extrabold text-[#131b2e] tracking-tight">
-                {mode === "signin" ? "Welcome back to pdfkitfree" : "Create your Consultant Account"}
+                {mode === "signin" ? "Welcome back to FreePDFKit" : "Create your Consultant Account"}
               </h2>
               <p className="text-xs text-[#434655] mt-1">
                 {mode === "signin"

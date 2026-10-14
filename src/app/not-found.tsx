@@ -2,8 +2,12 @@ import Link from "next/link";
 import { Video, LayoutDashboard, Home, FileQuestion } from "lucide-react";
 
 export const metadata = {
-  title: "404 - Page Not Found | pdfkitfree",
+  title: "404 - Page Not Found | FreePDFKit",
   description: "The page you requested could not be found.",
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function NotFound() {

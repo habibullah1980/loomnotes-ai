@@ -41,9 +41,14 @@ export async function proxy(request: NextRequest) {
   const isAuthRoute =
     url.pathname.startsWith("/login") || url.pathname.startsWith("/signup");
   const isProtected =
-    url.pathname.startsWith("/dashboard") || url.pathname.startsWith("/admin");
+    url.pathname.startsWith("/dashboard") ||
+    url.pathname.startsWith("/admin") ||
+    url.pathname.startsWith("/clients") ||
+    url.pathname.startsWith("/follow-ups") ||
+    url.pathname.startsWith("/calendar") ||
+    url.pathname.startsWith("/settings");
 
-  // Protect /dashboard and /admin routes
+  // Protect internal authenticated workspace and CRM routes
   if (!user && isProtected) {
     url.pathname = "/login";
     return NextResponse.redirect(url);

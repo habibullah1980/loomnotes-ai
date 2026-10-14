@@ -73,11 +73,11 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
         {/* Brand Header */}
         <div className="h-16 flex items-center px-6 border-b border-slate-100 dark:border-slate-800/80">
           <Link href="/dashboard" className="flex items-center gap-2.5 group">
-            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-blue-600 via-blue-700 to-teal-600 text-white shadow-xs">
+            <div className="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-[#4b49ac] via-[#7978e3] to-[#7DA0FA] text-white shadow-xs">
               <Video className="h-4 w-4" />
             </div>
             <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-              pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
+              FreePDF<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">Kit</span>
             </span>
           </Link>
         </div>
@@ -199,10 +199,10 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
             <Link href="/dashboard" className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-600 text-white shadow-2xs">
+              <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#4b49ac] text-white shadow-2xs">
                 <Video className="h-3.5 w-3.5" />
               </div>
-              <span className="font-bold text-sm text-slate-900 dark:text-white">pdfkitfree</span>
+              <span className="font-bold text-sm text-slate-900 dark:text-white">FreePDFKit</span>
             </Link>
           </div>
 

@@ -9,15 +9,15 @@ export function Footer() {
           {/* Brand Col */}
           <div className="md:col-span-2 space-y-3">
             <Link href="/" className="inline-flex items-center gap-2">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-blue-600 via-blue-700 to-teal-600 text-white shadow-2xs">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tr from-[#4b49ac] via-[#7978e3] to-[#7DA0FA] text-white shadow-2xs">
                 <Video className="h-4 w-4" />
               </div>
               <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white">
-                pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
+                FreePDF<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">Kit</span>
               </span>
             </Link>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
-              Transform your Loom meeting conversations into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini.
+              All-in-one free online PDF tools to merge, split, compress, and edit documents, plus video compression, electronic NDA signing, and AI document chat.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-          <p>© {new Date().getFullYear()} pdfkitfree. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FreePDFKit. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
             <span>
               Design and Developed by{" "}

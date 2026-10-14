@@ -4,8 +4,15 @@ import { Loader2, Video } from "lucide-react";
 import { ForgotPasswordForm } from "@/components/auth/forgot-password-form";
 
 export const metadata = {
-  title: "Reset Password - pdfkitfree",
-  description: "Reset your pdfkitfree account password securely.",
+  title: "Reset Password - FreePDFKit",
+  description: "Reset your FreePDFKit account password securely.",
+  alternates: {
+    canonical: "/forgot-password",
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 function FormFallback() {
