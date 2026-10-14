@@ -69,7 +69,7 @@ export function StitchAuthForm({ initialMode = "signin" }: StitchAuthProps) {
                 <span className="material-symbols-outlined leading-none">bolt</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-lg text-[#131b2e] tracking-tight font-extrabold">FreePDFKit</span>
+                <span className="text-lg text-[#131b2e] tracking-tight font-extrabold">LoomNotesAI</span>
                 <span className="text-[10px] text-[#434655] uppercase tracking-wider font-bold">
                   Freelance Pipeline Engine
                 </span>
@@ -121,7 +121,7 @@ export function StitchAuthForm({ initialMode = "signin" }: StitchAuthProps) {
               ))}
             </div>
             <p className="text-xs text-[#131b2e] italic leading-relaxed">
-              &ldquo;pdfkitfree helped me recover $18,000 in forgotten project proposals and cut client ghosting to zero.&rdquo;
+              &ldquo;LoomNotesAI helped me recover $18,000 in forgotten project proposals and cut client ghosting to zero.&rdquo;
             </p>
             <div className="mt-2.5 flex items-center space-x-2.5">
               <div className="h-7 w-7 rounded-full bg-[#eaedff] flex items-center justify-center text-[#004ac6] font-bold text-xs">
@@ -167,7 +167,7 @@ export function StitchAuthForm({ initialMode = "signin" }: StitchAuthProps) {
             {/* Dynamic Header */}
             <div className="mb-4">
               <h2 className="text-xl font-extrabold text-[#131b2e] tracking-tight">
-                {mode === "signin" ? "Welcome back to FreePDFKit" : "Create your Consultant Account"}
+                {mode === "signin" ? "Welcome back to LoomNotesAI" : "Create your Consultant Account"}
               </h2>
               <p className="text-xs text-[#434655] mt-1">
                 {mode === "signin"

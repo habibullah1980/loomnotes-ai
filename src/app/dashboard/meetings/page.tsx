@@ -8,7 +8,7 @@ import { MeetingHistoryList } from "@/components/meetings/meeting-history-list";
 import { ChevronRight, Video, AlertCircle, Sparkles } from "lucide-react";
 
 export const metadata = {
-  title: "Meeting History - pdfkitfree",
+  title: "Meeting History - LoomNotesAI",
   description: "Browse and search all your AI-analyzed Loom meeting notes and action items.",
 };
 

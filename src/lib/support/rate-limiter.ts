@@ -1,5 +1,5 @@
 /**
- * FreePDFKit Support Chatbot - Rate Limiter & Security Input Sanitizer
+ * LoomNotesAI Support Chatbot - Rate Limiter & Security Input Sanitizer
  * Protects server resources, prevents abuse, and enforces privacy standards.
  */
 

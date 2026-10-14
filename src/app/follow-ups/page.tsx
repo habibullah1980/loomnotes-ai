@@ -4,7 +4,7 @@ import { ClientFollowProvider } from "@/context/clientfollow-context";
 import FollowUpsView from "@/components/follow-ups/follow-ups-view";
 
 export const metadata: Metadata = {
-  title: "Follow-ups & Cadences - pdfkitfree CRM",
+  title: "Follow-ups & Cadences - LoomNotesAI CRM",
   description: "Cadence Control Hub: manage timely client follow-ups, invoices, and deliverable touchpoints.",
 };
 

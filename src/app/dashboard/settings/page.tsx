@@ -9,7 +9,7 @@ import { Settings, ShieldCheck, ChevronRight, User, KeyRound } from "lucide-reac
 import { Badge } from "@/components/ui/badge";
 
 export const metadata = {
-  title: "Account Settings - pdfkitfree",
+  title: "Account Settings - LoomNotesAI",
   description: "Manage your account profile, preferences, and workspace settings.",
 };
 

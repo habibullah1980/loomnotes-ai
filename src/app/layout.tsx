@@ -12,49 +12,48 @@ const inter = Inter({
   display: "swap",
 });
 
-const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://pdfkitfree.com";
+const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://loomnotes.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
   title: {
-    default: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
-    template: "%s | FreePDFKit",
+    default: "LoomNotesAI - AI Meeting Notes, Summaries & Action Items",
+    template: "%s | LoomNotesAI",
   },
   description:
-    "Free online PDF tools to merge, split, compress, convert, edit, and protect PDFs. Features video compressor, electronic NDA signing, and AI document chat with bank-grade security.",
+    "LoomNotesAI transforms your meeting recordings and transcripts into concise summaries, key decisions, and actionable tasks — automatically with Google Gemini AI.",
   keywords: [
-    "FreePDFKit",
-    "pdfkitfree",
-    "merge pdf free",
-    "split pdf",
-    "compress pdf online",
-    "convert pdf to word",
-    "video compressor free",
-    "sign nda online",
-    "ai document chat",
-    "gemini pdf analyzer",
-    "electronic signature pdf",
+    "LoomNotesAI",
+    "loomnotesai",
+    "loom notes ai",
+    "meeting summary AI",
+    "action items extractor",
+    "Gemini AI meetings",
+    "video transcript summary",
+    "async meeting notes",
+    "NDA signing",
+    "video compressor",
   ],
-  authors: [{ name: "FreePDFKit Team" }],
-  creator: "FreePDFKit",
-  publisher: "FreePDFKit",
+  authors: [{ name: "LoomNotesAI Team" }],
+  creator: "LoomNotesAI",
+  publisher: "LoomNotesAI",
   alternates: {
     canonical: "./",
   },
   openGraph: {
-    title: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
+    title: "LoomNotesAI - AI Meeting Notes, Summaries & Action Items",
     description:
-      "Merge, split, compress, convert, and protect PDFs online. Includes video compression, e-signing NDAs, and Gemini AI document chat.",
+      "Transform meeting conversations and recordings into structured summaries, key decisions, and action items with LoomNotesAI.",
     url: appUrl,
-    siteName: "FreePDFKit",
+    siteName: "LoomNotesAI",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FreePDFKit - All-in-One Free PDF Tools & Video Compressor",
+    title: "LoomNotesAI - AI Meeting Notes, Summaries & Action Items",
     description:
-      "Merge, split, compress, convert, edit PDFs and sign NDAs online with FreePDFKit.",
+      "Transform meeting conversations into structured summaries, key decisions, and action items with LoomNotesAI.",
   },
   robots: {
     index: true,

@@ -28,7 +28,7 @@ export default function GlobalError({
               Application Error
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-sm mx-auto">
-              A critical error occurred while loading pdfkitfree. Please refresh the page.
+              A critical error occurred while loading LoomNotesAI. Please refresh the page.
             </p>
           </div>
 

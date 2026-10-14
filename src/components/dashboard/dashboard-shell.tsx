@@ -202,7 +202,7 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
               <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#4b49ac] text-white shadow-2xs">
                 <Video className="h-3.5 w-3.5" />
               </div>
-              <span className="font-bold text-sm text-slate-900 dark:text-white">FreePDFKit</span>
+              <span className="font-bold text-sm text-slate-900 dark:text-white">LoomNotesAI</span>
             </Link>
           </div>
 

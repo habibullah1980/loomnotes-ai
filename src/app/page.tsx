@@ -21,11 +21,11 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "FreePDFKit - All-in-One Free PDF Tools, Video Compressor & NDA Signing",
+  title: "LoomNotesAI - AI Meeting Notes, Action Items & Instant Video Intelligence",
   description:
-    "Free online PDF tools to merge, split, compress, convert, edit, and protect PDFs. Features video compressor, electronic NDA signing, and AI document chat with bank-grade security.",
+    "Turn video meetings and Loom recordings into concise summaries, key decisions, and actionable tasks automatically with Google Gemini AI.",
   alternates: {
-    canonical: "https://pdfkitfree.com",
+    canonical: "https://loomnotes.ai",
   },
 };
 
@@ -34,7 +34,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "SoftwareApplication",
-      "name": "FreePDFKit",
+      "name": "LoomNotesAI",
       "operatingSystem": "Web, Windows, macOS, Linux, iOS, Android",
       "applicationCategory": "BusinessApplication",
       "offers": {
@@ -43,17 +43,17 @@ const jsonLd = {
         "priceCurrency": "USD",
       },
       "description":
-        "Free all-in-one PDF tools to merge, split, compress, convert, edit, and protect PDFs with video compression and electronic NDA signing.",
-      "url": "https://pdfkitfree.com",
+        "AI-powered meeting intelligence platform that turns Loom recordings and video transcripts into concise summaries, key decisions, and actionable tasks automatically.",
+      "url": "https://loomnotes.ai",
     },
     {
       "@type": "Organization",
-      "name": "FreePDFKit",
-      "url": "https://pdfkitfree.com",
-      "logo": "https://pdfkitfree.com/favicon.ico",
+      "name": "LoomNotesAI",
+      "url": "https://loomnotes.ai",
+      "logo": "https://loomnotes.ai/favicon.ico",
       "contactPoint": {
         "@type": "ContactPoint",
-        "email": "support@pdfkitfree.com",
+        "email": "support@loomnotes.ai",
         "contactType": "customer support",
       },
     },
@@ -62,38 +62,38 @@ const jsonLd = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How do I merge multiple PDF files for free?",
+          "name": "How do I extract notes from a Loom video?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Upload your PDF documents to the FreePDFKit workspace, reorder the pages or files as desired, and click 'Merge PDFs' to download your combined document instantly.",
+              "Paste your Loom video link or upload your transcript into LoomNotesAI. Our Google Gemini AI pipeline extracts an executive summary, key decisions, and action items with owners and deadlines in seconds.",
           },
         },
         {
           "@type": "Question",
-          "name": "How does electronic NDA signing work in FreePDFKit?",
+          "name": "How does LoomNotesAI organize action items?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "You can upload an existing contract or generate a standard mutual NDA template, place signature and date fields, draw or type your electronic signature, and download a finalized signed PDF with a digital audit trail.",
+              "LoomNotesAI automatically detects commitments and assigns owners, priority levels, and due dates directly into an interactive task tracker.",
           },
         },
         {
           "@type": "Question",
-          "name": "Is FreePDFKit safe and private for confidential business documents?",
+          "name": "Is LoomNotesAI safe and private for confidential business meetings?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Yes. All file transfers are secured with TLS 1.3 encryption. Data is isolated using PostgreSQL Row Level Security (RLS), and files are never used to train public AI models.",
+              "Yes. All file transfers are secured with TLS 1.3 encryption. Data is isolated using PostgreSQL Row Level Security (RLS), and your proprietary meeting content is never used to train public AI models.",
           },
         },
         {
           "@type": "Question",
-          "name": "Can I compress videos as well as PDF documents?",
+          "name": "Can I export or share meeting summaries with my team?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text":
-              "Yes. FreePDFKit includes a built-in video compressor supporting MP4, WebM, and MOV formats to reduce video file sizes for email and web sharing.",
+              "Yes. LoomNotesAI provides one-click copying to markdown, client follow-up email templates, and direct link sharing.",
           },
         },
       ],
@@ -158,7 +158,7 @@ export default async function Home() {
 
             {/* Supporting Copy */}
             <p className="text-base sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-              pdfkitfree transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically.
+              LoomNotesAI transforms your meeting conversations into concise summaries, key decisions, and actionable tasks — automatically.
             </p>
 
             {/* CTAs */}
@@ -199,7 +199,7 @@ export default async function Home() {
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
                     <div className="h-2.5 w-2.5 rounded-full bg-slate-300 dark:bg-slate-600" />
-                    <span className="ml-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">pdfkitfree.com/dashboard</span>
+                    <span className="ml-2 text-[11px] font-mono text-slate-500 dark:text-slate-400">loomnotes.ai/dashboard</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="inline-flex items-center gap-1 text-[11px] font-medium text-teal-700 dark:text-teal-300 bg-teal-50 dark:bg-teal-950/50 border border-teal-200 dark:border-teal-800 px-2 py-0.5 rounded-md">
@@ -374,7 +374,7 @@ export default async function Home() {
                       The Solution
                     </h3>
                     <p className="text-xs text-teal-700 dark:text-teal-400">
-                      pdfkitfree turns conversations into structured information you can actually use.
+                      LoomNotesAI turns conversations into structured information you can actually use.
                     </p>
                   </div>
                 </div>
@@ -703,7 +703,7 @@ export default async function Home() {
                 Unlimited AI meetings for all teams
               </h2>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                pdfkitfree is currently in technical preview. All users receive unlimited meeting generations.
+                LoomNotesAI is currently in technical preview. All users receive unlimited meeting generations.
               </p>
             </div>
 

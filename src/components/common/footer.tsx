@@ -13,11 +13,11 @@ export function Footer() {
                 <Video className="h-4 w-4" />
               </div>
               <span className="font-bold text-sm tracking-tight text-slate-900 dark:text-white">
-                FreePDF<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">Kit</span>
+                Loom<span className="text-[#4b49ac] dark:text-[#98dbff] font-semibold ml-0.5">NotesAI</span>
               </span>
             </Link>
             <p className="text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
-              All-in-one free online PDF tools to merge, split, compress, and edit documents, plus video compression, electronic NDA signing, and AI document chat.
+              AI-powered meeting intelligence platform that turns Loom recordings and video transcripts into concise summaries, key decisions, and actionable tasks automatically.
             </p>
           </div>
 
@@ -106,7 +106,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 mt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-slate-400">
-          <p>© {new Date().getFullYear()} FreePDFKit. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} LoomNotesAI. All rights reserved.</p>
           <p className="flex items-center gap-1.5">
             <span>
               Design and Developed by{" "}

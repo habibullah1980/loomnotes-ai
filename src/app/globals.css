@@ -13,7 +13,7 @@
   --secondary-text: #64748b;
   --border-color: #e2e8f0;
 
-  /* FreePDFKit Brand Palette */
+  /* LoomNotesAI Brand Palette */
   --brand-primary: #4b49ac;
   --brand-sky: #98dbff;
   --brand-periwinkle: #7DA0FA;
@@ -35,7 +35,7 @@
   --secondary-text: #94a3b8;
   --border-color: #1e293b;
 
-  /* FreePDFKit Brand Palette */
+  /* LoomNotesAI Brand Palette */
   --brand-primary: #6362c9;
   --brand-sky: #98dbff;
   --brand-periwinkle: #7DA0FA;
@@ -57,7 +57,7 @@
   --color-secondary-text: var(--secondary-text);
   --color-border-color: var(--border-color);
 
-  /* FreePDFKit Brand Colors */
+  /* LoomNotesAI Brand Colors */
   --color-brand-primary: var(--brand-primary);
   --color-brand-sky: var(--brand-sky);
   --color-brand-periwinkle: var(--brand-periwinkle);

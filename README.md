@@ -1,8 +1,8 @@
-# FreePDFKit (pdfkitfree)
+# LoomNotesAI
 
-**All-in-One Free PDF Tools, Video Compressor & Electronic NDA Signing SaaS**
+**AI-Powered Meeting Notes, Loom Video Intelligence & Action Items SaaS**
 
-FreePDFKit provides high-performance document tools, meeting summaries, video compression, and electronic contract signing with bank-grade security, PostgreSQL Row Level Security (RLS), and Google Gemini AI intelligence.
+LoomNotesAI provides high-performance meeting summaries, video transcript intelligence, action item extraction, and client follow-ups with bank-grade security, PostgreSQL Row Level Security (RLS), and Google Gemini AI intelligence.
 
 ---
 
@@ -53,7 +53,7 @@ Configure `.env.local`:
 
 ```env
 # Application URL
-NEXT_PUBLIC_APP_URL="https://pdfkitfree.com"
+NEXT_PUBLIC_APP_URL="https://loomnotes.ai"
 
 # Supabase Auth & Database
 NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
@@ -98,7 +98,7 @@ The support chatbot widget is globally accessible on all pages:
 - Grounded in `/src/lib/support/knowledge-base.ts`.
 - Server-side rate limited to prevent denial-of-service.
 - Secure fallback when AI credentials are not configured.
-- Escalation path directly to `support@pdfkitfree.com`.
+- Escalation path directly to `support@loomnotes.ai`.
 
 ---
 
@@ -123,4 +123,4 @@ npm run test:e2e
 ## 🛡️ License & Credits
 
 Design and Developed by [HThinkers.com](https://hthinkers.com).  
-© 2026 FreePDFKit. All rights reserved.
+© 2026 LoomNotesAI. All rights reserved.

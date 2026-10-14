@@ -1,5 +1,5 @@
 /**
- * FreePDFKit Google Analytics 4 (GA4) Privacy-Safe Tracker
+ * LoomNotesAI Google Analytics 4 (GA4) Privacy-Safe Tracker
  *
  * Strict Privacy Commitments:
  * - NO Personal Identifiable Information (PII): No names, emails, phone numbers, passwords.
@@ -41,7 +41,7 @@ const DEDUP_WINDOW_MS = 2000;
 export function getConsentStatus(): boolean {
   if (typeof window === "undefined") return false;
   try {
-    const val = localStorage.getItem("freepdfkit_analytics_consent");
+    const val = localStorage.getItem("loomnotesai_analytics_consent") || localStorage.getItem("freepdfkit_analytics_consent");
     return val === "granted";
   } catch {
     return false;
@@ -51,7 +51,7 @@ export function getConsentStatus(): boolean {
 export function setConsentStatus(granted: boolean): void {
   if (typeof window === "undefined") return;
   try {
-    localStorage.setItem("freepdfkit_analytics_consent", granted ? "granted" : "denied");
+    localStorage.setItem("loomnotesai_analytics_consent", granted ? "granted" : "denied");
     if (window.gtag) {
       window.gtag("consent", "update", {
         analytics_storage: granted ? "granted" : "denied",

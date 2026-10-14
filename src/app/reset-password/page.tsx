@@ -4,8 +4,8 @@ import { Loader2, Video } from "lucide-react";
 import { ResetPasswordForm } from "@/components/auth/reset-password-form";
 
 export const metadata = {
-  title: "Set New Password - FreePDFKit",
-  description: "Set a new secure password for your FreePDFKit account.",
+  title: "Set New Password - LoomNotesAI",
+  description: "Set a new secure password for your LoomNotesAI account.",
   robots: {
     index: false,
     follow: false,
@@ -34,7 +34,7 @@ export default function ResetPasswordPage() {
               <Video className="h-5 w-5" />
             </div>
             <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-zinc-900 to-zinc-600 dark:from-white dark:to-slate-300 bg-clip-text text-transparent">
-              pdfkitfree
+              LoomNotesAI
             </span>
           </Link>
           <h1 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">

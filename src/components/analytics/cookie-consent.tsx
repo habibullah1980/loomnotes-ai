@@ -10,7 +10,7 @@ export function CookieConsentBanner() {
 
   useEffect(() => {
     try {
-      const consent = localStorage.getItem("freepdfkit_analytics_consent");
+      const consent = localStorage.getItem("loomnotesai_analytics_consent") || localStorage.getItem("freepdfkit_analytics_consent");
       if (!consent) {
         // Show after a brief delay so it doesn't block initial page load
         const timer = setTimeout(() => setShowBanner(true), 1200);

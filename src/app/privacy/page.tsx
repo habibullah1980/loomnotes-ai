@@ -4,8 +4,8 @@ import { Footer } from "@/components/common/footer";
 import { ArrowLeft, Lock, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
-  title: "Privacy Policy - FreePDFKit",
-  description: "Privacy Policy and data protection commitments for FreePDFKit.",
+  title: "Privacy Policy - LoomNotesAI",
+  description: "Privacy Policy and data protection commitments for LoomNotesAI.",
   alternates: {
     canonical: "/privacy",
   },
@@ -45,7 +45,7 @@ export default function PrivacyPolicyPage() {
               </div>
             </div>
             <p className="text-xs sm:text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
-              Last Updated: October 6, 2026. This policy outlines how pdfkitfree collects, processes, and protects your information.
+              Last Updated: October 6, 2026. This policy outlines how LoomNotesAI collects, processes, and protects your information.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 rounded-lg bg-teal-50 dark:bg-teal-950/50 px-3 py-1 text-xs font-medium text-teal-800 dark:text-teal-300 border border-teal-200 dark:border-teal-800">
               <CheckCircle2 className="h-3.5 w-3.5 text-teal-600 dark:text-teal-400" />
@@ -58,7 +58,7 @@ export default function PrivacyPolicyPage() {
             <section className="space-y-3">
               <h2 className="text-base font-bold text-slate-900 dark:text-white">1. Information We Collect</h2>
               <p>
-                When you use pdfkitfree, we collect the necessary information to provide AI meeting intelligence services:
+                When you use LoomNotesAI, we collect the necessary information to provide AI meeting intelligence services:
               </p>
               <ul className="list-disc pl-5 space-y-1.5 text-slate-600 dark:text-slate-300">
                 <li><strong>Account Information:</strong> Name, email address, password hashes, and optional details (phone number, company name).</li>
@@ -83,7 +83,7 @@ export default function PrivacyPolicyPage() {
             <section className="space-y-3">
               <h2 className="text-base font-bold text-slate-900 dark:text-white">3. AI Processing & Third-Party Services</h2>
               <p>
-                pdfkitfree interfaces with enterprise cloud providers:
+                LoomNotesAI interfaces with enterprise cloud providers:
               </p>
               <ul className="list-disc pl-5 space-y-1.5 text-slate-600 dark:text-slate-300">
                 <li><strong>Google Gemini API:</strong> Transcripts are transmitted securely to generate meeting insights. We do not use your private meeting transcripts to train public foundational AI models.</li>
@@ -102,8 +102,8 @@ export default function PrivacyPolicyPage() {
               <h2 className="text-base font-bold text-slate-900 dark:text-white">5. Contact Us</h2>
               <p>
                 For privacy inquiries, data export requests, or security audits, contact our security team at{" "}
-                <a href="mailto:privacy@pdfkitfree.com" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">
-                  privacy@pdfkitfree.com
+                <a href="mailto:privacy@loomnotes.ai" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">
+                  privacy@loomnotes.ai
                 </a>.
               </p>
             </section>

@@ -1,5 +1,5 @@
 /**
- * Automated QA Test Suite for FreePDFKit
+ * Automated QA Test Suite for LoomNotesAI
  * Verifies Customer Support Chatbot, Security Sanitization, Rate Limiter, and SEO.
  */
 
@@ -7,7 +7,7 @@ import { checkRateLimit, sanitizeChatInput } from "../src/lib/support/rate-limit
 import { searchKnowledgeBase } from "../src/lib/support/knowledge-base.ts";
 
 console.log("====================================================");
-console.log("  FreePDFKit - Support Chat & SEO QA Test Suite");
+console.log("  LoomNotesAI - Support Chat & SEO QA Test Suite");
 console.log("====================================================\n");
 
 let passed = 0;

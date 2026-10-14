@@ -99,7 +99,7 @@ export default function ClientFollowSettingsView({ userEmail = "sarah.jenkins@st
               <p className="text-xs text-[#434655]">Need help mapping your pipeline triggers or connecting Gmail sync? Our consultants are on standby.</p>
               <button
                 type="button"
-                onClick={() => alert("Support ticket opened with pdfkitfree onboarding team.")}
+                onClick={() => alert("Support ticket opened with LoomNotesAI onboarding team.")}
                 className="text-[#004ac6] text-xs font-bold hover:underline flex items-center gap-1 mt-1 text-left cursor-pointer"
               >
                 <span>Schedule 15m onboarding</span>

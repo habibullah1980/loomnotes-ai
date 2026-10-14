@@ -1,16 +1,16 @@
 /**
- * Site configuration and navigation structure for FreePDFKit
+ * Site configuration and navigation structure for LoomNotesAI
  */
 
 export const siteConfig = {
-  name: "FreePDFKit",
+  name: "LoomNotesAI",
   description:
-    "All-in-one free online PDF tools to merge, split, compress, and convert documents, plus video compression, electronic NDA signing, and AI document chat.",
-  url: process.env.NEXT_PUBLIC_APP_URL || "https://pdfkitfree.com",
+    "All-in-one AI platform for meeting intelligence, document summaries, video compression, electronic NDA signing, and actionable task management.",
+  url: process.env.NEXT_PUBLIC_APP_URL || "https://loomnotes.ai",
   links: {
     github: "https://github.com",
     docs: "/#features",
-    supportEmail: "support@pdfkitfree.com",
+    supportEmail: "support@loomnotes.ai",
   },
   navItems: [
     { label: "Features", href: "#features" },

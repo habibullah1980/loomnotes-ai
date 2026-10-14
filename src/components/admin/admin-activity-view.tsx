@@ -249,7 +249,7 @@ export function AdminActivityView({ initialItems }: AdminActivityViewProps) {
                       </div>
                       <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">No activity recorded yet.</p>
                       <p className="text-xs text-slate-400 dark:text-slate-500 max-w-sm">
-                        Activity will appear automatically as users interact with pdfkitfree.
+                        Activity will appear automatically as users interact with LoomNotesAI.
                       </p>
                     </div>
                   </td>

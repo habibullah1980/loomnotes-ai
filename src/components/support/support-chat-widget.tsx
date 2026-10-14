@@ -40,7 +40,7 @@ const INITIAL_WELCOME_MESSAGE: ChatMessage = {
   id: "welcome-1",
   role: "assistant",
   content:
-    "Hello! 👋 I'm your **FreePDFKit Support Assistant**. I can help you navigate our PDF tools, video compressor, NDA signing workflows, account settings, and pricing.\n\nHow can I help you today?",
+    "Hello! 👋 I'm your **LoomNotesAI Support Assistant**. I can help you navigate our meeting notes, Loom video summaries, action items, account settings, and pricing.\n\nHow can I help you today?",
   timestamp: "Just now",
 };
 
@@ -57,7 +57,7 @@ export function SupportChatWidget() {
   // Restore chat history from sessionStorage on mount
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem("freepdfkit_chat_history");
+      const saved = sessionStorage.getItem("loomnotesai_chat_history") || sessionStorage.getItem("freepdfkit_chat_history");
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -73,7 +73,7 @@ export function SupportChatWidget() {
   useEffect(() => {
     try {
       if (messages.length > 1) {
-        sessionStorage.setItem("freepdfkit_chat_history", JSON.stringify(messages));
+        sessionStorage.setItem("loomnotesai_chat_history", JSON.stringify(messages));
       }
     } catch {
       // Ignore
@@ -144,7 +144,7 @@ export function SupportChatWidget() {
       const assistantMsg: ChatMessage = {
         id: `assistant-${Date.now()}`,
         role: "assistant",
-        content: data.reply || "I am unable to answer right now. Please email support@pdfkitfree.com.",
+        content: data.reply || "I am unable to answer right now. Please email support@loomnotes.ai.",
         timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
         status: data.status,
         toolLink: data.toolLink,
@@ -169,6 +169,7 @@ export function SupportChatWidget() {
   const handleClearChat = () => {
     if (confirm("Are you sure you want to clear this conversation history?")) {
       setMessages([INITIAL_WELCOME_MESSAGE]);
+      sessionStorage.removeItem("loomnotesai_chat_history");
       sessionStorage.removeItem("freepdfkit_chat_history");
       setLastFailedMessage(null);
     }
@@ -240,7 +241,7 @@ export function SupportChatWidget() {
 
           <button
             onClick={handleOpen}
-            aria-label="Open FreePDFKit Customer Support Chat"
+            aria-label="Open LoomNotesAI Customer Support Chat"
             className="h-14 w-14 rounded-full bg-[#4b49ac] hover:bg-[#7978e3] text-white shadow-lg flex items-center justify-center transition-all duration-200 active:scale-95 cursor-pointer ring-4 ring-[#98dbff]/30 focus:outline-none focus:ring-4 focus:ring-[#7DA0FA]"
           >
             <MessageSquare className="h-6 w-6 stroke-[2.2]" />
@@ -251,7 +252,7 @@ export function SupportChatWidget() {
       {/* 2. CHAT WINDOW (EXPANDED OR MINIMIZED) */}
       {isOpen && (
         <section
-          aria-label="FreePDFKit Support Chat Window"
+          aria-label="LoomNotesAI Support Chat Window"
           className={`fixed right-4 sm:right-6 bottom-4 sm:bottom-6 z-50 bg-white dark:bg-[#0c1220] border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-2xl flex flex-col transition-all duration-200 overflow-hidden ${
             isMinimized
               ? "h-14 w-80 sm:w-96"
@@ -265,7 +266,7 @@ export function SupportChatWidget() {
                 <Sparkles className="h-4 w-4" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm font-bold leading-tight">FreePDFKit Support</span>
+                <span className="text-sm font-bold leading-tight">LoomNotesAI Support</span>
                 <span className="text-[10px] text-[#98dbff] font-medium leading-tight">
                   Verified Knowledge Assistant
                 </span>
@@ -416,7 +417,7 @@ export function SupportChatWidget() {
                 </form>
                 <div className="mt-1.5 flex items-center justify-between text-[10px] text-slate-400">
                   <span>Never share passwords or payment cards.</span>
-                  <span>Escalate: support@pdfkitfree.com</span>
+                  <span>Escalate: support@loomnotes.ai</span>
                 </div>
               </footer>
             </>

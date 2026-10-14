@@ -102,7 +102,7 @@ export function ReadinessDashboard() {
           <span>Project Foundation Successfully Initialized</span>
         </div>
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-900">
-          pdfkitfree
+          LoomNotesAI
         </h1>
         <p className="text-lg text-zinc-600">
           Turn video recordings into clear, structured summaries, key takeaways, and actionable tasks with AI.
@@ -155,7 +155,7 @@ export function ReadinessDashboard() {
         <div>
           <h3 className="text-lg font-bold text-zinc-900 flex items-center gap-2">
             <FileText className="h-5 w-5 text-indigo-500" />
-            pdfkitfree Pipeline Blueprint
+            LoomNotesAI Pipeline Blueprint
           </h3>
           <p className="text-sm text-zinc-500 mt-1">
             Planned execution flow prepared for the subsequent Supabase and Gemini API integrations.

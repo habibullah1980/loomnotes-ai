@@ -195,7 +195,7 @@ export function SignupForm() {
               className="mt-0.5 h-4 w-4 rounded border-slate-300 dark:border-slate-700 text-blue-600 focus:ring-blue-500/20 cursor-pointer"
             />
             <span className="leading-snug">
-              Send me occasional product updates, tips, and news from pdfkitfree.
+              Send me occasional product updates, tips, and news from LoomNotesAI.
             </span>
           </label>
         </div>

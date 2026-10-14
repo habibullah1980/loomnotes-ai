@@ -96,10 +96,10 @@ export async function POST(req: NextRequest) {
     const knowledgeContext = buildGroundedKnowledgeContext();
 
     const systemInstruction = `
-You are the FreePDFKit Customer Support Assistant. Your job is to help users navigate FreePDFKit (also known as pdfkitfree), its PDF tools, video compressor, NDA signing, AI document chat, accounts, and pricing.
+You are the LoomNotesAI Customer Support Assistant. Your job is to help users navigate LoomNotesAI, its AI meeting summaries, Loom transcript extraction, action items, accounts, and pricing.
 
 CRITICAL OPERATIONAL RULES:
-1. STRICT GROUNDING: Answer questions based ONLY on the approved FreePDFKit Knowledge Base below. Do NOT invent features, prices, file size limits, or refund timelines.
+1. STRICT GROUNDING: Answer questions based ONLY on the approved LoomNotesAI Knowledge Base below. Do NOT invent features, prices, file size limits, or refund timelines.
 2. HONEST LIMITATIONS: If a feature is not supported or not mentioned in the documentation, state this honestly. Never pretend a feature exists.
 3. HELPFUL NAVIGATION: Provide clickable Markdown links to relevant routes:
    - Dashboard & Workspace: [Workspace](/dashboard)
@@ -112,10 +112,10 @@ CRITICAL OPERATIONAL RULES:
    - Privacy Policy: [Privacy Policy](/privacy)
    - Terms of Service: [Terms of Service](/terms)
 4. NO SENSITIVE DATA: Never ask for or store passwords, OTPs, verification codes, or credit card details.
-5. NO UNAUTHORIZED ACTIONS: You cannot directly modify user account tiers, execute refunds, or sign legal documents yourself. Explain how the user can perform these actions in their dashboard or contact support@pdfkitfree.com.
+5. NO UNAUTHORIZED ACTIONS: You cannot directly modify user account tiers, execute refunds, or sign legal documents yourself. Explain how the user can perform these actions in their dashboard or contact support@loomnotes.ai.
 6. CONCISE & EMPATHETIC: Keep responses friendly, clear, and structured with bullet points.
 
-APPROVED FREEPDFKIT KNOWLEDGE BASE:
+APPROVED LOOMNOTESAI KNOWLEDGE BASE:
 ${knowledgeContext}
 `.trim();
 
@@ -178,7 +178,7 @@ function formatFallbackResponse(
   isMissingKey: boolean = false
 ): string {
   const prefix = isMissingKey
-    ? "*(Note: FreePDFKit AI is operating in Knowledge Mode — Server API Key not configured)*\n\n"
+    ? "*(Note: LoomNotesAI AI is operating in Knowledge Mode — Server API Key not configured)*\n\n"
     : "";
 
   if (article) {
@@ -193,16 +193,16 @@ function formatFallbackResponse(
     if (article.link) {
       text += `👉 [${article.link.label}](${article.link.url})\n\n`;
     }
-    text += "Need further assistance? Email our support team directly at **support@pdfkitfree.com**.";
+    text += "Need further assistance? Email our support team directly at **support@loomnotes.ai**.";
     return text;
   }
 
-  return `${prefix}Thank you for contacting FreePDFKit Support! We can help you with:
-- **PDF Tools**: Merge, Split, Compress, Convert, Edit, and Protect PDFs
-- **Video Compressor**: Compress large MP4 and WebM videos
-- **NDA Signing**: Generate, upload, and e-sign mutual NDAs
+  return `${prefix}Thank you for contacting LoomNotesAI Support! We can help you with:
+- **Meeting Notes**: AI summaries, decisions, and action items
+- **Loom Extraction**: Instant transcript parsing from video URLs
+- **Client Follow-ups**: Formatted email updates and touchpoint cadences
 - **Account & Verification**: Free signup, login, and password reset
 - **Pricing & Plans**: Early Access Free Tier ($0), Pro ($15/mo), and Business ($39/mo)
 
-You can explore your [Workspace](/dashboard) or contact human support at **support@pdfkitfree.com**.`;
+You can explore your [Workspace](/dashboard) or contact human support at **support@loomnotes.ai**.`;
 }

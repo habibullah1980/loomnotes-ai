@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Video, LayoutDashboard, Home, FileQuestion } from "lucide-react";
 
 export const metadata = {
-  title: "404 - Page Not Found | FreePDFKit",
+  title: "404 - Page Not Found | LoomNotesAI",
   description: "The page you requested could not be found.",
   robots: {
     index: false,
@@ -20,7 +20,7 @@ export default function NotFound() {
             <Video className="h-4 w-4" />
           </div>
           <span className="font-bold text-base tracking-tight text-slate-900 dark:text-white">
-            pdfkit<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">free</span>
+            Loom<span className="text-teal-600 dark:text-teal-400 font-semibold ml-0.5">NotesAI</span>
           </span>
         </Link>
         <Link
@@ -72,7 +72,7 @@ export default function NotFound() {
 
       {/* Footer Bar */}
       <footer className="h-14 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0c1220] px-4 text-center flex items-center justify-center text-xs text-slate-400 dark:text-slate-500">
-        <p>© {new Date().getFullYear()} pdfkitfree. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} LoomNotesAI. All rights reserved.</p>
       </footer>
     </div>
   );

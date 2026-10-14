@@ -1,6 +1,6 @@
 /**
- * FreePDFKit Grounded Knowledge Base & Documentation Source
- * Strictly verified against actual FreePDFKit product features and policies.
+ * LoomNotesAI Grounded Knowledge Base & Documentation Source
+ * Strictly verified against actual LoomNotesAI product features and policies.
  */
 
 export interface KnowledgeArticle {
@@ -21,7 +21,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     keywords: ["merge", "combine", "join", "multiple pdfs", "merge pdf"],
     title: "How to Merge Multiple PDFs into One Document",
     summary:
-      "FreePDFKit allows you to combine multiple PDF files into a single, organized document in seconds. Files are merged in your specified order with page numbers preserved.",
+      "LoomNotesAI allows you to combine multiple PDF files into a single, organized document in seconds. Files are merged in your specified order with page numbers preserved.",
     steps: [
       "Navigate to the PDF Tools section or workspace.",
       "Upload the PDF files you want to combine (drag & drop supported).",
@@ -97,7 +97,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     id: "video-compressor",
     topic: "Video Compressor",
     keywords: ["video", "video compressor", "compress video", "mp4", "webm", "mov", "shrink video"],
-    title: "How to Use the FreePDFKit Video Compressor",
+    title: "How to Use the LoomNotesAI Video Compressor",
     summary:
       "Shrink large MP4, WebM, and MOV video recordings so they can be easily emailed, sent on Slack, or shared asynchronously with clients.",
     steps: [
@@ -115,7 +115,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     keywords: ["nda", "sign", "e-sign", "signature", "non-disclosure", "agreement", "contract"],
     title: "How to Upload, Generate, and Sign NDAs Electronically",
     summary:
-      "FreePDFKit provides seamless electronic signature workflows for non-disclosure agreements and freelance contracts. You can generate standard mutual NDAs or upload existing agreements.",
+      "LoomNotesAI provides seamless electronic signature workflows for non-disclosure agreements and freelance contracts. You can generate standard mutual NDAs or upload existing agreements.",
     steps: [
       "Navigate to your workspace client or documents dashboard.",
       "Choose 'Generate NDA' for a standard mutual agreement, or 'Upload Document' for your custom NDA.",
@@ -130,7 +130,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     id: "account-registration",
     topic: "Account Registration & Verification",
     keywords: ["register", "signup", "verify", "email verification", "create account", "login", "password reset"],
-    title: "How to Register and Verify Your FreePDFKit Account",
+    title: "How to Register and Verify Your LoomNotesAI Account",
     summary:
       "Signing up takes under 60 seconds with no credit card required during early access. We provide secure email & password registration and Google OAuth sign-in.",
     steps: [
@@ -148,7 +148,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     keywords: ["ai chat", "ai document", "gemini", "transcript", "meeting notes", "summarize", "clauses"],
     title: "How to Use AI Document Chat & Meeting Summaries",
     summary:
-      "Powered by Google Gemini AI, FreePDFKit extracts executive summaries, key decisions, concrete action items, and answers natural-language questions about uploaded documents and meeting transcripts.",
+      "Powered by Google Gemini AI, LoomNotesAI extracts executive summaries, key decisions, concrete action items, and answers natural-language questions about uploaded documents and meeting transcripts.",
     steps: [
       "In the dashboard, open 'New Meeting' or select an existing document.",
       "Paste your meeting transcript or document text.",
@@ -162,9 +162,9 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     id: "pricing-plans",
     topic: "Free vs Pro & Business Plans",
     keywords: ["pricing", "cost", "free vs pro", "plans", "subscription", "business", "limits"],
-    title: "FreePDFKit Plans & Pricing Tiers",
+    title: "LoomNotesAI Plans & Pricing Tiers",
     summary:
-      "FreePDFKit offers an unrestricted Early Access Free Tier, with premium Pro and Business tiers available for high-volume consultants and agencies.",
+      "LoomNotesAI offers an unrestricted Early Access Free Tier, with premium Pro and Business tiers available for high-volume consultants and agencies.",
     steps: [
       "Early Access Free Tier ($0/mo): Unlimited AI meeting generations, standard PDF conversions, up to 25MB file size, and community support.",
       "Pro Plan ($15/mo): Priority GPU processing, up to 500MB file size, unlimited e-signatures, batch tools, and dedicated email support.",
@@ -184,7 +184,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
       "Visit /settings and open the 'Billing & Invoices' tab.",
       "View your current billing period, download past PDF invoices, or update payment cards.",
       "To cancel: click 'Cancel Subscription'. Your access continues until the current billing period expires.",
-      "Refund policy: We offer a 7-day money-back guarantee for first-time purchases by contacting support@pdfkitfree.com.",
+      "Refund policy: We offer a 7-day money-back guarantee for first-time purchases by contacting support@loomnotes.ai.",
     ],
     link: { label: "Manage Settings", url: "/settings" },
     category: "pricing",
@@ -195,7 +195,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     keywords: ["privacy", "security", "gdpr", "retention", "tls", "encryption", "rls", "is my data safe"],
     title: "Privacy, File Processing & Data Security Standards",
     summary:
-      "Your documents are private to you. FreePDFKit uses TLS 1.3 encryption in transit, encrypted storage at rest, and strict PostgreSQL Row Level Security (RLS) to ensure cross-user data isolation.",
+      "Your documents are private to you. LoomNotesAI uses TLS 1.3 encryption in transit, encrypted storage at rest, and strict PostgreSQL Row Level Security (RLS) to ensure cross-user data isolation.",
     steps: [
       "Private by Default: We never use your private documents, NDAs, or transcripts to train public AI models.",
       "Data Retention: Uploaded processing files are automatically cleared after conversion unless saved to your personal workspace.",
@@ -212,7 +212,7 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
     summary:
       "Need personalized help with an account issue, bug report, or enterprise billing inquiry? Our support engineers are standing by.",
     steps: [
-      "Email our support team directly at support@pdfkitfree.com.",
+      "Email our support team directly at support@loomnotes.ai.",
       "Or open your workspace Settings (/settings) to submit an onboarding assistance request.",
       "Typical response time is within 4-8 business hours.",
     ],
