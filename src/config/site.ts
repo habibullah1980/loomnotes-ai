@@ -5,11 +5,11 @@
 export const siteConfig = {
   name: "LoomNotesAI",
   description:
-    "All-in-one AI platform for meeting intelligence, document summaries, video compression, electronic NDA signing, and actionable task management.",
+    "AI-powered meeting intelligence platform that turns Loom recordings and video transcripts into concise summaries, key decisions, and actionable tasks automatically.",
   url: process.env.NEXT_PUBLIC_APP_URL || "https://loomnotes.ai",
   links: {
     github: "https://github.com",
-    docs: "/#features",
+    docs: "/#how-it-works",
     supportEmail: "support@loomnotes.ai",
   },
   navItems: [

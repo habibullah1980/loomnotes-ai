@@ -63,10 +63,10 @@ export async function POST(req: NextRequest) {
 
   // Suggested follow-ups based on match or general topics
   const defaultFollowUps = [
-    "How do I merge or split PDFs?",
-    "How to use the video compressor?",
-    "How does NDA signing work?",
-    "What are the Free vs Pro plan limits?",
+    "How do I extract notes from a Loom video?",
+    "What is in the 5-part AI meeting summary?",
+    "How does action item tracking work?",
+    "Is LoomNotesAI free to use?",
     "How do I contact customer support?",
   ];
 
@@ -96,23 +96,26 @@ export async function POST(req: NextRequest) {
     const knowledgeContext = buildGroundedKnowledgeContext();
 
     const systemInstruction = `
-You are the LoomNotesAI Customer Support Assistant. Your job is to help users navigate LoomNotesAI, its AI meeting summaries, Loom transcript extraction, action items, accounts, and pricing.
+You are the LoomNotesAI Customer Support Assistant. Your job is to help users navigate LoomNotesAI, its AI meeting summaries, Loom transcript extraction, action items hub, meeting history, client CRM follow-ups, accounts, and pricing.
 
 CRITICAL OPERATIONAL RULES:
-1. STRICT GROUNDING: Answer questions based ONLY on the approved LoomNotesAI Knowledge Base below. Do NOT invent features, prices, file size limits, or refund timelines.
+1. STRICT GROUNDING: Answer questions based ONLY on the approved LoomNotesAI Knowledge Base below. Do NOT invent features, prices, file size limits, or unverified claims.
 2. HONEST LIMITATIONS: If a feature is not supported or not mentioned in the documentation, state this honestly. Never pretend a feature exists.
 3. HELPFUL NAVIGATION: Provide clickable Markdown links to relevant routes:
    - Dashboard & Workspace: [Workspace](/dashboard)
-   - New Meeting & AI Analysis: [New Analysis](/dashboard/new)
-   - Client & NDA Dossier: [Clients](/clients)
-   - Account Settings & Billing: [Settings](/settings)
+   - New Meeting & AI Analysis: [New Meeting](/dashboard/new)
+   - Meeting History: [Meeting History](/dashboard/meetings)
+   - Action Items Hub: [Action Items](/dashboard/action-items)
+   - Client CRM: [Clients](/clients)
+   - Follow-ups: [Follow-ups](/follow-ups)
+   - Account Settings: [Settings](/settings)
    - Signup: [Sign Up](/signup)
    - Login: [Log In](/login)
-   - Pricing: [Pricing](/pricing)
+   - Pricing: [Pricing](/#pricing)
    - Privacy Policy: [Privacy Policy](/privacy)
    - Terms of Service: [Terms of Service](/terms)
 4. NO SENSITIVE DATA: Never ask for or store passwords, OTPs, verification codes, or credit card details.
-5. NO UNAUTHORIZED ACTIONS: You cannot directly modify user account tiers, execute refunds, or sign legal documents yourself. Explain how the user can perform these actions in their dashboard or contact support@loomnotes.ai.
+5. NO UNAUTHORIZED ACTIONS: You cannot directly modify user account tiers, execute refunds, or alter database records yourself. Explain how the user can perform these actions in their dashboard or contact support@loomnotes.ai.
 6. CONCISE & EMPATHETIC: Keep responses friendly, clear, and structured with bullet points.
 
 APPROVED LOOMNOTESAI KNOWLEDGE BASE:
@@ -198,11 +201,12 @@ function formatFallbackResponse(
   }
 
   return `${prefix}Thank you for contacting LoomNotesAI Support! We can help you with:
-- **Meeting Notes**: AI summaries, decisions, and action items
-- **Loom Extraction**: Instant transcript parsing from video URLs
-- **Client Follow-ups**: Formatted email updates and touchpoint cadences
-- **Account & Verification**: Free signup, login, and password reset
-- **Pricing & Plans**: Early Access Free Tier ($0), Pro ($15/mo), and Business ($39/mo)
+- **Loom & Meeting Notes**: Instant transcript extraction and AI summaries
+- **5-Part Structure**: Executive summary, key takeaways, decisions, action items, and follow-up questions
+- **Action Items Hub**: Interactive task checklists with owners and due dates
+- **Client CRM & Follow-ups**: Client dossiers and formatted follow-up outreach
+- **Account & Verification**: Free signup, Google OAuth, and password management
+- **100% Free Early Access**: Unlimited AI meeting generations ($0/mo, no credit card required)
 
 You can explore your [Workspace](/dashboard) or contact human support at **support@loomnotes.ai**.`;
 }

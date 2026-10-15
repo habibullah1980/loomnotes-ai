@@ -28,11 +28,12 @@ interface ChatMessage {
 }
 
 const QUICK_TOPICS = [
-  "How do I merge or split PDFs?",
-  "How to compress videos?",
-  "How to generate & sign an NDA?",
-  "Free vs Pro plan limits?",
-  "Is my document data private?",
+  "How do I extract notes from a Loom video?",
+  "What is in the 5-part AI meeting summary?",
+  "How does action item tracking work?",
+  "Is LoomNotesAI free to use?",
+  "How do client follow-ups work?",
+  "Is my meeting data private?",
   "How do I contact support?",
 ];
 
@@ -40,7 +41,7 @@ const INITIAL_WELCOME_MESSAGE: ChatMessage = {
   id: "welcome-1",
   role: "assistant",
   content:
-    "Hello! 👋 I'm your **LoomNotesAI Support Assistant**. I can help you navigate our meeting notes, Loom video summaries, action items, account settings, and pricing.\n\nHow can I help you today?",
+    "Hello! 👋 I'm your **LoomNotesAI Support Assistant**. I can help you with Loom video extraction, 5-part AI meeting summaries, action item tracking, client follow-ups, and account settings.\n\nHow can I help you today?",
   timestamp: "Just now",
 };
 
@@ -57,7 +58,7 @@ export function SupportChatWidget() {
   // Restore chat history from sessionStorage on mount
   useEffect(() => {
     try {
-      const saved = sessionStorage.getItem("loomnotesai_chat_history") || sessionStorage.getItem("freepdfkit_chat_history");
+      const saved = sessionStorage.getItem("loomnotesai_chat_history");
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -170,7 +171,6 @@ export function SupportChatWidget() {
     if (confirm("Are you sure you want to clear this conversation history?")) {
       setMessages([INITIAL_WELCOME_MESSAGE]);
       sessionStorage.removeItem("loomnotesai_chat_history");
-      sessionStorage.removeItem("freepdfkit_chat_history");
       setLastFailedMessage(null);
     }
   };
@@ -401,7 +401,7 @@ export function SupportChatWidget() {
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="Ask about PDF tools, NDA signing, pricing..."
+                    placeholder="Ask about Loom notes, action items, AI summaries, pricing..."
                     disabled={isLoading}
                     maxLength={1000}
                     className="flex-1 text-xs sm:text-sm bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 px-3.5 py-2.5 rounded-xl border border-slate-200 dark:border-slate-800 focus:outline-none focus:border-[#4b49ac] focus:ring-2 focus:ring-[#7DA0FA]/20 disabled:opacity-60"
