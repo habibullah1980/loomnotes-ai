@@ -121,8 +121,9 @@ export async function POST(req: NextRequest) {
       }
 
       // ------------------------------------------------------------------------
-      // B. Subscription Updated / Renewed / Plan Changed
+      // B. Subscription Created or Updated / Renewed / Plan Changed
       // ------------------------------------------------------------------------
+      case "customer.subscription.created":
       case "customer.subscription.updated": {
         const subscription = event.data.object as Stripe.Subscription;
         let userId = subscription.metadata?.userId;
@@ -211,8 +212,9 @@ export async function POST(req: NextRequest) {
       }
 
       // ------------------------------------------------------------------------
-      // D. Invoice Payment Succeeded (Recurring Monthly Renewal)
+      // D. Invoice Paid / Payment Succeeded (Recurring Monthly Renewal)
       // ------------------------------------------------------------------------
+      case "invoice.paid":
       case "invoice.payment_succeeded": {
         const invoice = event.data.object as Stripe.Invoice;
         const subId = (invoice as any).subscription;

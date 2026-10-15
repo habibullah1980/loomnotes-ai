@@ -84,7 +84,7 @@ export async function POST(req: NextRequest) {
     }
 
     // 4. Build line items for $9.99/month
-    const priceId = process.env.STRIPE_PRO_PRICE_ID;
+    const priceId = process.env.STRIPE_PRICE_ID || process.env.STRIPE_PRO_PRICE_ID;
     const lineItems: any[] = priceId
       ? [{ price: priceId, quantity: 1 }]
       : [
