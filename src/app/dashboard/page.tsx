@@ -18,7 +18,9 @@ import {
   Clock,
   CheckCircle,
   AlertCircle,
+  Sparkles,
 } from "lucide-react";
+import { CheckoutButton } from "@/components/pricing/checkout-button";
 
 export const metadata = {
   title: "Dashboard - LoomNotesAI",
@@ -139,20 +141,62 @@ export default async function DashboardPage() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {usage.isSuperAdmin ? (
             <Badge variant="teal" className="text-xs">
               Super Admin • Unlimited
             </Badge>
-          ) : (
-            <Badge variant={usage.isLimitReached ? "destructive" : "secondary"} className="text-xs">
-              {usage.used} / {usage.limit} Free Meetings Used
+          ) : usage.isPro ? (
+            <Badge variant="teal" className="text-xs">
+              Pro Subscriber • Unlimited ($9.99/mo)
             </Badge>
+          ) : (
+            <div className="flex items-center gap-2">
+              <Badge variant={usage.isLimitReached ? "destructive" : "secondary"} className="text-xs">
+                Free Plan: {usage.used} / {usage.freeLimit} Videos Used ({usage.remaining} remaining)
+              </Badge>
+              <Link
+                href="/pricing"
+                className="text-xs font-semibold text-[#4b49ac] dark:text-[#98dbff] hover:underline"
+              >
+                Upgrade to Pro
+              </Link>
+            </div>
           )}
         </div>
       </div>
 
-      {/* 2. Stats (4 Cards) */}
+      {/* 2. Free 3-Video Limit Reached Alert Banner */}
+      {!usage.isPro && !usage.isSuperAdmin && usage.isLimitReached && (
+        <div className="rounded-2xl border-2 border-amber-400/90 dark:border-amber-700 bg-amber-50/90 dark:bg-amber-950/40 p-5 shadow-xs transition-colors">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <div className="h-10 w-10 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0 shadow-xs">
+                <Sparkles className="h-5 w-5 text-white" />
+              </div>
+              <div className="space-y-0.5">
+                <h3 className="text-sm font-bold text-amber-950 dark:text-amber-200">
+                  You&apos;ve used your 3 free videos. Upgrade to Pro for $9.99/month to continue.
+                </h3>
+                <p className="text-xs text-amber-800/80 dark:text-amber-300/80 leading-relaxed">
+                  Unlock unlimited video processing, priority Google Gemini intelligence, and continuous task tracking with our Pro subscription.
+                </p>
+              </div>
+            </div>
+            <div className="shrink-0 w-full sm:w-auto">
+              <CheckoutButton
+                isLoggedIn={true}
+                isPro={false}
+                size="default"
+                text="Upgrade to Pro — $9.99/mo"
+                className="w-full sm:w-auto px-5 py-2.5 text-xs shadow-xs"
+              />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 3. Stats (4 Cards) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: Total Meetings */}
         <Card className="hover:border-blue-500/40 transition-colors shadow-2xs">
@@ -174,22 +218,26 @@ export default async function DashboardPage() {
           </CardContent>
         </Card>
 
-        {/* Card 2: Meetings This Month */}
+        {/* Card 2: Plan & Free Credits Quota */}
         <Card className="hover:border-teal-500/40 transition-colors shadow-2xs">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-              This Month
+              {usage.isPro || usage.isSuperAdmin ? "Plan Status" : "Free Video Credits"}
             </CardTitle>
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400">
               <Calendar className="h-4 w-4" />
             </div>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-slate-900 dark:text-white">
-              {meetingsThisMonth}
+            <div className="text-2xl font-bold text-teal-700 dark:text-teal-300">
+              {usage.isPro || usage.isSuperAdmin
+                ? "Unlimited"
+                : `${usage.remaining} left`}
             </div>
             <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Recorded in {currentMonthName}
+              {usage.isPro || usage.isSuperAdmin
+                ? "Active Pro ($9.99/mo)"
+                : `${usage.used} of ${usage.freeLimit} free videos used`}
             </p>
           </CardContent>
         </Card>

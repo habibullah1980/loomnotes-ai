@@ -21,6 +21,7 @@ import { createMeetingAction } from "@/app/actions/meetings";
 import { fetchLoomTranscriptAction } from "@/app/actions/loom";
 import { parseLoomUrl } from "@/lib/loom/url";
 import { MonthlyUsageInfo } from "@/lib/usage/usage-service";
+import { CheckoutButton } from "@/components/pricing/checkout-button";
 
 interface NewMeetingFormProps {
   usage?: MonthlyUsageInfo;
@@ -60,7 +61,8 @@ export function NewMeetingForm({ usage }: NewMeetingFormProps) {
 
   const charCount = transcript.length;
   const wordCount = transcript.trim() ? transcript.trim().split(/\s+/).length : 0;
-  const isGenerateDisabled = !transcript.trim() || isPending || isFetchingTranscript;
+  const isLimitReached = Boolean(usage?.isLimitReached);
+  const isGenerateDisabled = !transcript.trim() || isPending || isFetchingTranscript || isLimitReached;
 
   const handleLoomUrlChange = (value: string) => {
     setLoomUrl(value);
@@ -149,20 +151,56 @@ export function NewMeetingForm({ usage }: NewMeetingFormProps) {
   return (
     <form action={handleSubmit} className="space-y-6">
 
-      {/* Top Info Banner */}
-      <div className="rounded-2xl border border-blue-200/80 dark:border-blue-900/60 bg-blue-50/40 dark:bg-blue-950/30 p-4 transition-colors">
-        <div className="flex items-start gap-3">
-          <Info className="h-4.5 w-4.5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
-          <div className="space-y-0.5">
-            <h4 className="text-xs font-semibold text-blue-900 dark:text-blue-200">
-              Transcript Required for AI Processing
-            </h4>
-            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-              Enter a Loom share link to fetch the transcript, or paste discussion text manually. Google Gemini will extract summaries, key decisions, and actionable tasks.
-            </p>
+      {/* Free Plan Limit Reached Banner or Info Banner */}
+      {isLimitReached ? (
+        <div className="rounded-2xl border-2 border-amber-400/90 dark:border-amber-700 bg-amber-50/90 dark:bg-amber-950/40 p-5 shadow-xs transition-colors space-y-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="flex items-start gap-3">
+              <div className="h-9 w-9 rounded-xl bg-amber-500 text-white flex items-center justify-center shrink-0">
+                <Sparkles className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="text-sm font-bold text-amber-900 dark:text-amber-200">
+                  You&apos;ve used your 3 free videos. Upgrade to Pro for $9.99/month to continue.
+                </h4>
+                <p className="text-xs text-amber-800/80 dark:text-amber-300/80 mt-0.5">
+                  Unlock unlimited video processing, priority Google Gemini analysis, and continuous task tracking.
+                </p>
+              </div>
+            </div>
+            <div className="shrink-0 w-full sm:w-auto">
+              <CheckoutButton
+                isLoggedIn={true}
+                isPro={false}
+                size="default"
+                text="Upgrade to Pro — $9.99/mo"
+                className="w-full sm:w-auto px-4 py-2 text-xs shadow-xs"
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="rounded-2xl border border-blue-200/80 dark:border-blue-900/60 bg-blue-50/40 dark:bg-blue-950/30 p-4 transition-colors">
+          <div className="flex items-start gap-3">
+            <Info className="h-4.5 w-4.5 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5" />
+            <div className="space-y-0.5 flex-1">
+              <div className="flex items-center justify-between">
+                <h4 className="text-xs font-semibold text-blue-900 dark:text-blue-200">
+                  Transcript Required for AI Processing
+                </h4>
+                {usage && !usage.isUnlimited && (
+                  <span className="text-[11px] font-bold text-blue-700 dark:text-blue-300 bg-blue-100/70 dark:bg-blue-900/50 px-2 py-0.5 rounded-md">
+                    {usage.remaining} of 3 Free Videos Remaining
+                  </span>
+                )}
+              </div>
+              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                Enter a Loom share link to fetch the transcript, or paste discussion text manually. Google Gemini will extract summaries, key decisions, and actionable tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Error message alert */}
       {displayError && (
@@ -360,24 +398,34 @@ export function NewMeetingForm({ usage }: NewMeetingFormProps) {
           <span>Back to Dashboard</span>
         </Link>
 
-        <Button
-          type="submit"
-          disabled={isGenerateDisabled}
-          size="md"
-          className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold"
-        >
-          {isPending ? (
-            <span className="flex items-center gap-2">
-              <Loader2 className="h-3.5 w-3.5 animate-spin" />
-              Generating notes with Gemini...
-            </span>
-          ) : (
-            <span className="flex items-center gap-1.5">
-              <Sparkles className="h-3.5 w-3.5" />
-              <span>Generate Notes</span>
-            </span>
-          )}
-        </Button>
+        {isLimitReached ? (
+          <CheckoutButton
+            isLoggedIn={true}
+            isPro={false}
+            size="default"
+            text="Upgrade to Pro for $9.99/mo to continue"
+            className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold"
+          />
+        ) : (
+          <Button
+            type="submit"
+            disabled={isGenerateDisabled}
+            size="md"
+            className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold"
+          >
+            {isPending ? (
+              <span className="flex items-center gap-2">
+                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                Generating notes with Gemini...
+              </span>
+            ) : (
+              <span className="flex items-center gap-1.5">
+                <Sparkles className="h-3.5 w-3.5" />
+                <span>Generate Notes</span>
+              </span>
+            )}
+          </Button>
+        )}
       </div>
     </form>
   );

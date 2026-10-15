@@ -122,17 +122,17 @@ export const KNOWLEDGE_ARTICLES: KnowledgeArticle[] = [
   {
     id: "pricing-early-access",
     topic: "100% Free Early Access & Pricing",
-    keywords: ["pricing", "cost", "free", "early access", "subscription", "plans", "credit card", "price", "tier"],
-    title: "LoomNotesAI Pricing & Early Access Free Tier",
+    keywords: ["pricing", "cost", "free", "pro", "subscription", "plans", "credit card", "price", "9.99", "limit", "credits"],
+    title: "LoomNotesAI Freemium Pricing & Pro Subscription",
     summary:
-      "LoomNotesAI is currently 100% free in Technical Preview / Early Access. All registered users enjoy unlimited AI meeting generations with zero fees and no credit card required.",
+      "LoomNotesAI operates on a transparent freemium model. Every new registered user receives 3 free video notes with full AI analysis. Pro is available for $9.99/month for unlimited video processing.",
     steps: [
-      "Early Access Free Tier ($0/month): Unlimited AI meeting generations, automatic Loom transcript fetching, 5-part structured notes, Action Items Hub, and Client CRM.",
-      "No credit card is required to sign up or create meetings.",
-      "Pro ($15/mo) and Business ($39/mo) tiers will offer advanced team collaboration and centralized administration in upcoming releases.",
+      "Free Plan ($0): Process up to 3 videos with complete executive summaries, key decisions, and action items. No credit card required.",
+      "Pro Subscription ($9.99/month): Unlimited video processing, priority Google Gemini analysis, unlimited meeting history, and live task sync.",
+      "Subscription Management: View past invoices and cancel anytime via the self-serve Stripe Customer Portal from Account Settings.",
       "Enterprise teams can contact support@loomnotes.ai for custom integration needs.",
     ],
-    link: { label: "View Pricing Section", url: "/#pricing" },
+    link: { label: "View Pricing Page", url: "/pricing" },
     category: "pricing",
   },
   {

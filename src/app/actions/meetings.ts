@@ -61,10 +61,12 @@ export async function createMeetingAction(
   }
 
   // 2. CHECK USAGE LIMIT BEFORE CALLING GEMINI
-  const { allowed, usage } = await checkUsageAllowance(supabase, user.id);
+  const { allowed, usage, error: usageError } = await checkUsageAllowance(supabase, user.id);
   if (!allowed) {
     return {
-      error: `You've reached your ${usage.limit} free meetings this month. Upgrade to Pro for unlimited meeting notes.`,
+      error:
+        usageError ||
+        "You've used your 3 free videos. Upgrade to Pro for $9.99/month to continue.",
       limitReached: true,
     };
   }

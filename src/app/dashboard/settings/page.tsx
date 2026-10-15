@@ -73,6 +73,10 @@ export default async function DashboardSettingsPage() {
             companyName,
             marketingConsent,
             role,
+            plan: usage.isPro ? "pro" : "free",
+            subscriptionStatus: usage.subscriptionStatus,
+            usedVideos: usage.used,
+            remainingVideos: usage.remaining,
           }}
         />
       </div>

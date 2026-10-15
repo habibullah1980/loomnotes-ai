@@ -13,8 +13,8 @@ export const siteConfig = {
     supportEmail: "support@loomnotes.ai",
   },
   navItems: [
-    { label: "Features", href: "#features" },
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
+    { label: "Features", href: "/#features" },
+    { label: "How It Works", href: "/#how-it-works" },
+    { label: "Pricing", href: "/pricing" },
   ],
 };

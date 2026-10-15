@@ -38,7 +38,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/#pricing" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <Link href="/pricing" className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Pricing
                 </Link>
               </li>

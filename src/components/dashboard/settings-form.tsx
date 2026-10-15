@@ -2,8 +2,10 @@
 
 import { useActionState } from "react";
 import { updateUserProfileAction, AuthState } from "@/app/actions/auth";
-import { User, Building2, Phone, Mail, CheckCircle2, AlertCircle, Loader2, Sparkles, Shield, Sun } from "lucide-react";
+import { User, Building2, Phone, Mail, CheckCircle2, AlertCircle, Loader2, Sparkles, Shield, Sun, CreditCard, ExternalLink } from "lucide-react";
 import { ThemeToggle } from "@/components/theme/theme-toggle";
+import { CheckoutButton } from "@/components/pricing/checkout-button";
+import { PortalButton } from "@/components/pricing/portal-button";
 
 interface SettingsFormProps {
   user: {
@@ -14,6 +16,11 @@ interface SettingsFormProps {
     companyName?: string | null;
     marketingConsent?: boolean;
     role?: string;
+    plan?: string;
+    subscriptionStatus?: string;
+    hasStripeCustomer?: boolean;
+    usedVideos?: number;
+    remainingVideos?: number;
   };
 }
 
@@ -90,6 +97,66 @@ export function SettingsForm({ user }: SettingsFormProps) {
               className="w-full rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900 px-3 py-2 text-xs text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-blue-500 dark:focus:border-blue-400 focus:bg-white dark:focus:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
             />
           </div>
+        </div>
+      </div>
+
+      {/* Subscription & Billing */}
+      <div className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0c1220] p-6 space-y-4 shadow-xs transition-colors">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+          <div>
+            <h3 className="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+              <CreditCard className="h-4 w-4 text-[#4b49ac] dark:text-[#98dbff]" />
+              <span>Subscription &amp; Billing</span>
+            </h3>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+              Manage your current plan, video processing quota, and Stripe billing details.
+            </p>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span
+              className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold ${
+                user.plan === "pro"
+                  ? "bg-teal-50 dark:bg-teal-950/60 text-teal-700 dark:text-teal-300 border border-teal-200 dark:border-teal-800"
+                  : "bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
+              }`}
+            >
+              {user.plan === "pro" ? "Pro Plan • $9.99/mo" : "Free Plan (3 Videos)"}
+            </span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400">Current Status</span>
+            <div className="font-semibold text-slate-900 dark:text-slate-100 flex items-center gap-1.5 capitalize">
+              <span className={`h-2 w-2 rounded-full ${user.plan === "pro" ? "bg-teal-500 animate-pulse" : "bg-slate-400"}`} />
+              {user.plan === "pro" ? "Active Subscription" : "Free Tier"}
+            </div>
+          </div>
+
+          <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-800 space-y-1">
+            <span className="text-[11px] text-slate-500 dark:text-slate-400">Video Quota</span>
+            <div className="font-semibold text-slate-900 dark:text-slate-100">
+              {user.plan === "pro"
+                ? "Unlimited video meeting notes"
+                : `${user.usedVideos ?? 0} of 3 free videos used (${user.remainingVideos ?? 0} left)`}
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+          {user.plan === "pro" ? (
+            <PortalButton />
+          ) : (
+            <CheckoutButton
+              isLoggedIn={true}
+              isPro={false}
+              size="default"
+              text="Upgrade to Pro — $9.99/mo"
+              className="w-full sm:w-auto px-5 py-2.5 text-xs font-semibold"
+            />
+          )}
         </div>
       </div>
 

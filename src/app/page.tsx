@@ -692,66 +692,58 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* 7. EARLY ACCESS / PRICING */}
+        {/* 7. FREEMIUM PRICING */}
         <section id="pricing" className="py-16 sm:py-24 bg-slate-50 dark:bg-[#090d16] border-b border-slate-200/80 dark:border-slate-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-teal-600 dark:text-teal-400">
-                100% Free Early Access
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4b49ac] dark:text-[#98dbff]">
+                Transparent Freemium Pricing
               </span>
               <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                Unlimited AI meetings for all teams
+                Start Free. Upgrade to Pro for $9.99/mo
               </h2>
               <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                LoomNotesAI is currently in technical preview. All users receive unlimited meeting generations.
+                Process your first 3 videos completely free with Google Gemini AI. Upgrade to Pro for unlimited meeting notes.
               </p>
             </div>
 
-            <div className="max-w-xl mx-auto">
-              {/* Early Access Unlimited Plan */}
-              <div className="rounded-2xl border-2 border-teal-600/90 dark:border-teal-500 bg-white dark:bg-[#0c1220] p-7 sm:p-9 shadow-sm relative text-left">
-                <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-teal-600 text-white text-[10px] font-bold uppercase tracking-wider">
-                  Unlimited Early Access
-                </div>
-
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Free Plan */}
+              <div className="rounded-3xl border border-slate-200/90 dark:border-slate-800 bg-white dark:bg-[#0c1220] p-7 sm:p-9 shadow-sm flex flex-col justify-between text-left">
                 <div className="space-y-5">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">Early Access Free Tier</h3>
-                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Full feature access for async teams</p>
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">Free Plan</h3>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">3 videos included for all new users</p>
                     </div>
-                    <Badge variant="teal" className="text-xs">No Credit Card Required</Badge>
+                    <Badge variant="secondary" className="text-xs">No Card Required</Badge>
                   </div>
 
                   <div className="flex items-baseline gap-1.5">
                     <span className="text-4xl font-extrabold text-slate-900 dark:text-white">$0</span>
-                    <span className="text-xs text-slate-500 dark:text-slate-400">/ free during early access</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">/ 3 free video notes</span>
                   </div>
 
                   <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Enjoy unlimited AI-generated summaries, key decisions, and action item tracking without limits, paywalls, or fees.
+                    Test full AI meeting intelligence with your own recordings. No credit card required.
                   </p>
 
-                  <ul className="space-y-3 text-xs text-slate-700 dark:text-slate-300 pt-2 border-t border-slate-100 dark:border-slate-800">
-                    <li className="flex items-center gap-2.5 font-medium">
+                  <ul className="space-y-2.5 text-xs text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <li className="flex items-center gap-2 font-medium">
                       <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0 stroke-[3]" />
-                      <span>Unlimited AI meeting generations</span>
+                      <span>3 free video meeting notes</span>
                     </li>
-                    <li className="flex items-center gap-2.5">
+                    <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
-                      <span>Automatic Loom public transcript retrieval</span>
+                      <span>5-part structured summaries</span>
                     </li>
-                    <li className="flex items-center gap-2.5">
+                    <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
-                      <span>Action item tracker with assignees &amp; deadlines</span>
+                      <span>Action Items Hub with assignees</span>
                     </li>
-                    <li className="flex items-center gap-2.5">
+                    <li className="flex items-center gap-2">
                       <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
-                      <span>Key decisions &amp; follow-up questions extraction</span>
-                    </li>
-                    <li className="flex items-center gap-2.5">
-                      <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
-                      <span>Searchable historical workspace repository</span>
+                      <span>Searchable meeting repository</span>
                     </li>
                   </ul>
                 </div>
@@ -759,9 +751,65 @@ export default async function Home() {
                 <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
                   <Link
                     href={user ? "/dashboard" : "/signup"}
-                    className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-semibold transition-colors text-xs sm:text-sm shadow-xs"
+                    className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 font-semibold transition-colors text-xs shadow-2xs"
                   >
-                    {user ? "Open Workspace" : "Get Free Early Access"}
+                    <span>{user ? "Open Workspace" : "Start Free"}</span>
+                    <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Pro Plan */}
+              <div className="rounded-3xl border-2 border-[#4b49ac] dark:border-[#7978e3] bg-white dark:bg-[#0c1220] p-7 sm:p-9 shadow-lg flex flex-col justify-between text-left relative ring-4 ring-[#7DA0FA]/15">
+                <div className="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-[#4b49ac] text-white text-[10px] font-bold uppercase tracking-wider">
+                  Unlimited Pro
+                </div>
+
+                <div className="space-y-5">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900 dark:text-white">Pro Subscription</h3>
+                      <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">Recurring monthly subscription</p>
+                    </div>
+                    <Badge variant="teal" className="text-xs">Stripe Secure</Badge>
+                  </div>
+
+                  <div className="flex items-baseline gap-1.5">
+                    <span className="text-4xl font-extrabold text-slate-900 dark:text-white">$9.99</span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400">/ month</span>
+                  </div>
+
+                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Unlimited AI meeting generations, priority Gemini processing, and self-serve cancellation anytime.
+                  </p>
+
+                  <ul className="space-y-2.5 text-xs text-slate-700 dark:text-slate-300 pt-3 border-t border-slate-100 dark:border-slate-800">
+                    <li className="flex items-center gap-2 font-medium">
+                      <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0 stroke-[3]" />
+                      <span>Unlimited video processing</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
+                      <span>Priority Google Gemini AI intelligence</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
+                      <span>Unlimited meeting history &amp; tasks</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-teal-600 dark:text-teal-400 shrink-0" />
+                      <span>Self-serve Stripe portal (Cancel anytime)</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="pt-6 mt-6 border-t border-slate-100 dark:border-slate-800">
+                  <Link
+                    href="/pricing"
+                    className="w-full inline-flex items-center justify-center py-3 px-4 rounded-xl bg-gradient-to-r from-[#4b49ac] via-[#7978e3] to-[#7DA0FA] hover:opacity-95 text-white font-semibold transition-all text-xs shadow-xs"
+                  >
+                    <span>Upgrade to Pro — $9.99/mo</span>
+                    <ArrowRight className="h-3.5 w-3.5 ml-1.5" />
                   </Link>
                 </div>
               </div>

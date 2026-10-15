@@ -123,35 +123,52 @@ export function DashboardShell({ user, usage, children }: DashboardShellProps) {
         </div>
 
         {/* Sidebar Bottom: Usage Mini Card & User Profile */}
-        <div className="p-4 border-t border-slate-100 space-y-4">
+        <div className="p-4 border-t border-slate-100 dark:border-slate-800 space-y-4">
           {/* Subtle Usage Widget */}
-          <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 space-y-2 text-xs">
+          <div className="p-3 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200/70 dark:border-slate-800 space-y-2 text-xs">
             <div className="flex items-center justify-between font-semibold">
-              <span className="text-slate-700 text-[11px]">AI Usage</span>
-              <span className="text-blue-600 text-[11px]">
-                {usage.isSuperAdmin ? "Unlimited" : `${usage.used} / ${usage.limit}`}
+              <span className="text-slate-700 dark:text-slate-300 text-[11px]">
+                {usage.isSuperAdmin ? "Super Admin" : usage.isPro ? "Pro Plan" : "Free Plan"}
+              </span>
+              <span className="text-blue-600 dark:text-blue-400 text-[11px]">
+                {usage.isSuperAdmin || usage.isPro ? "Unlimited" : `${usage.used} / ${usage.freeLimit || 3}`}
               </span>
             </div>
-            <div className="w-full bg-slate-200 h-1.5 rounded-full overflow-hidden">
+            <div className="w-full bg-slate-200 dark:bg-slate-800 h-1.5 rounded-full overflow-hidden">
               <div
                 className={`h-full rounded-full transition-all duration-500 ${
-                  usage.isSuperAdmin
-                    ? "bg-gradient-to-r from-blue-600 to-teal-500 w-full"
+                  usage.isSuperAdmin || usage.isPro
+                    ? "bg-gradient-to-r from-teal-500 to-blue-600 w-full"
                     : usage.isLimitReached
                     ? "bg-red-500 w-full"
-                    : "bg-blue-600"
+                    : "bg-[#4b49ac]"
                 }`}
-                style={{ width: usage.isSuperAdmin ? "100%" : `${usage.percentageUsed}%` }}
+                style={{
+                  width:
+                    usage.isSuperAdmin || usage.isPro
+                      ? "100%"
+                      : `${Math.min(100, Math.round((usage.used / (usage.freeLimit || 3)) * 100))}%`,
+                }}
               />
             </div>
-            {!usage.isSuperAdmin && usage.isLimitReached && (
-              <Link
-                href="/#pricing"
-                className="text-[10px] text-blue-600 hover:underline flex items-center gap-1 font-semibold"
-              >
-                <span>Upgrade to Pro</span>
-                <ArrowRight className="h-2.5 w-2.5" />
-              </Link>
+            {!usage.isSuperAdmin && !usage.isPro ? (
+              <div className="pt-1 flex items-center justify-between text-[10px]">
+                <span className="text-slate-500 dark:text-slate-400">
+                  {usage.remaining} free left
+                </span>
+                <Link
+                  href="/pricing"
+                  className="text-[#4b49ac] dark:text-[#98dbff] hover:underline flex items-center gap-0.5 font-semibold"
+                >
+                  <span>Upgrade ($9.99/mo)</span>
+                  <ArrowRight className="h-2.5 w-2.5" />
+                </Link>
+              </div>
+            ) : (
+              <div className="pt-1 text-[10px] text-teal-600 dark:text-teal-400 font-semibold flex items-center gap-1">
+                <Sparkles className="h-3 w-3" />
+                <span>Unlimited video processing</span>
+              </div>
             )}
           </div>
 

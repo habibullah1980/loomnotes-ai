@@ -51,7 +51,7 @@ export function Navbar({ user }: NavbarProps) {
               How It Works
             </Link>
             <Link
-              href="/#pricing"
+              href="/pricing"
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
               Pricing

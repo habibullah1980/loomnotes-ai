@@ -206,7 +206,7 @@ function formatFallbackResponse(
 - **Action Items Hub**: Interactive task checklists with owners and due dates
 - **Client CRM & Follow-ups**: Client dossiers and formatted follow-up outreach
 - **Account & Verification**: Free signup, Google OAuth, and password management
-- **100% Free Early Access**: Unlimited AI meeting generations ($0/mo, no credit card required)
+- **Freemium & Pro Plan**: 3 free video notes ($0), Pro subscription ($9.99/mo) for unlimited video notes
 
-You can explore your [Workspace](/dashboard) or contact human support at **support@loomnotes.ai**.`;
+You can explore your [Workspace](/dashboard) or view [Pricing](/pricing).`;
 }
